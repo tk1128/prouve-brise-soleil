@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jean Prouvé — Brise-Soleil, c.1950s</title>
+  <meta name="description" content="An original Jean Prouvé Sun Shutter (Brise-soleil), c.1950s. Salvaged from a school in Cameroon. Available for acquisition via found, Okayama.">
+  <meta property="og:title" content="Jean Prouvé — Brise-Soleil, c.1950s">
+  <meta property="og:description" content="Original architectural sun shutter. Salvaged from Cameroon. Presented by found Ltd., Okayama.">
+  <meta property="og:image" content="photos/IMG_9375.jpeg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    "name": "Brise-Soleil (Sun Shutter)",
+    "creator": {
+      "@type": "Person",
+      "name": "Jean Prouvé",
+      "birthDate": "1901-04-08",
+      "deathDate": "1984-03-23",
+      "nationality": "French",
+      "sameAs": "https://en.wikipedia.org/wiki/Jean_Prouv%C3%A9"
+    },
+    "dateCreated": "1950/1959",
+    "artMedium": "Corrugated aluminium, painted steel frame",
+    "description": "Original architectural sun shutter system salvaged from a primary school in Cameroon.",
+    "locationCreated": { "@type": "Place", "name": "Cameroon", "addressCountry": "CM" },
+    "provenance": "Salvaged by Brice Bérard (@briceberardantiques). Acquired and presented by found Ltd., Okayama, Japan (@foundltd).",
+    "offers": {
+      "@type": "Offer",
+      "seller": { "@type": "Organization", "name": "found Ltd.", "location": "Okayama, Japan" },
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'void':   '#0A0A0A',
+            'chalk':  '#FBFBFA',
+            'cement': '#EAEAEA',
+            'steel':  '#6B7F8E',
+            'steel2': '#8FA3B1',
+            'warm':   '#A09890',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    *  { margin:0; padding:0; box-sizing:border-box; }
+    html { background:#0A0A0A; scroll-behavior:smooth; }
+    body {
+      font-family: -apple-system,'Helvetica Neue',sans-serif;
+      background:#0A0A0A; color:#FBFBFA;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    .font-display { font-family:'Cormorant Garamond',Georgia,serif; }
+    .font-mono    { font-family:'JetBrains Mono','Courier New',monospace; }
+
+    /* ── Gallery grid ── */
+    .gallery-grid {
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:3px;
+    }
+    .g1  { grid-column:1/8;  grid-row:1; }
+    .g2  { grid-column:8/13; grid-row:1; }
+    .g3  { grid-column:1/5;  grid-row:2; }
+    .g4  { grid-column:5/9;  grid-row:2; }
+    .g5  { grid-column:9/13; grid-row:2; }
+    .g6  { grid-column:1/4;  grid-row:3; }
+    .g7  { grid-column:4/9;  grid-row:3; }
+    .g8  { grid-column:9/13; grid-row:3; }
+    .g9  { grid-column:1/7;  grid-row:4; }
+    .g10 { grid-column:7/13; grid-row:4; }
+
+    .gallery-cell { overflow:hidden; background:#111; position:relative; }
+    .gallery-cell img {
+      width:100%; height:100%; object-fit:cover; display:block;
+      filter:grayscale(8%);
+      transition:filter .6s ease, transform .9s ease;
+    }
+    @media (hover:hover) {
+      .gallery-cell:hover img { filter:grayscale(0%); transform:scale(1.03); }
+    }
+    .g1 img,.g9 img,.g10 img { height:440px; }
+    .g2 img,.g7 img { height:440px; }
+    .g3 img,.g4 img,.g5 img,.g6 img,.g8 img { height:300px; }
+
+    /* Mobile gallery */
+    @media(max-width:768px){
+      .gallery-grid { grid-template-columns:1fr 1fr; gap:2px; }
+      .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10 {
+        grid-column:auto; grid-row:auto;
+      }
+      .gallery-cell img { height:180px !important; }
+      .g1 img,.g9 img { height:240px !important; }
+    }
+    @media(max-width:480px){
+      .gallery-cell img { height:150px !important; }
+      .g1 img,.g9 img { height:200px !important; }
+    }
+
+    /* ── Spec table ── */
+    .spec-row {
+      display:grid; grid-template-columns:160px 1fr;
+      gap:12px; border-bottom:1px solid rgba(255,255,255,.06);
+      padding:14px 0; align-items:baseline;
+    }
+    @media(max-width:600px){
+      .spec-row { grid-template-columns:1fr; gap:4px; }
+    }
+    .spec-key {
+      font-size:10px; letter-spacing:.2em; text-transform:uppercase;
+      color:#6B7F8E; font-family:'JetBrains Mono',monospace;
+    }
+    .spec-val { font-size:14px; color:#FBFBFA; line-height:1.7; }
+
+    /* ── Chain block ── */
+    .chain-block {
+      border:1px solid rgba(107,127,142,.3);
+      background:rgba(107,127,142,.04);
+      padding:clamp(20px,4vw,32px);
+    }
+    .chain-address {
+      font-family:'JetBrains Mono',monospace;
+      font-size:11px; letter-spacing:.06em;
+      color:#8FA3B1; word-break:break-all; line-height:1.8;
+    }
+    .chain-badge {
+      display:inline-block;
+      border:1px solid rgba(107,127,142,.4);
+      color:#8FA3B1; font-size:9px;
+      letter-spacing:.2em; text-transform:uppercase;
+      padding:5px 12px; font-family:'JetBrains Mono',monospace;
+      white-space:nowrap;
+    }
+
+    /* ── Nav ── */
+    #nav { transition:background .5s,backdrop-filter .5s; }
+    #nav.scrolled { background:rgba(10,10,10,.95); backdrop-filter:blur(12px); }
+
+    /* ── Language switcher ── */
+    .lang-btn {
+      font-family:'JetBrains Mono',monospace;
+      font-size:10px; letter-spacing:.15em;
+      padding:5px 10px; border:1px solid transparent;
+      background:transparent; color:#6B7F8E; cursor:pointer;
+      transition:color .2s,border-color .2s;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .lang-btn.active { color:#FBFBFA; border-color:rgba(251,251,250,.25); }
+    .lang-btn:hover  { color:#FBFBFA; }
+
+    /* ── Buttons ── */
+    .btn {
+      display:inline-block;
+      border:1px solid rgba(251,251,250,.25);
+      color:#FBFBFA; font-size:10px;
+      letter-spacing:.25em; text-transform:uppercase;
+      padding:14px 32px; text-decoration:none;
+      transition:background .3s,border-color .3s;
+      -webkit-tap-highlight-color:transparent;
+      min-height:48px; display:flex; align-items:center; justify-content:center;
+    }
+    .btn:hover { background:rgba(251,251,250,.06); border-color:#8FA3B1; }
+    .btn-secondary { border-color:rgba(107,127,142,.4); color:#8FA3B1; }
+    .btn-secondary:hover { color:#FBFBFA; }
+
+    .rule { width:40px; height:1px; background:#6B7F8E; }
+
+    /* ── Hamburger (mobile nav) ── */
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; }
+    .hamburger span { display:block; width:22px; height:1px; background:#FBFBFA; transition:.3s; }
+    @media(max-width:640px) {
+      .hamburger { display:flex; }
+      #mobile-lang { display:flex; }
+      #desktop-lang { display:none; }
+    }
+    #mobile-lang { display:none; }
+  </style>
+</head>
+
+<body>
+  <!-- ── NAV ─────────────────────────────────────────── -->
+  <nav id="nav" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-14 h-16">
+    <span class="font-display text-chalk text-lg font-light tracking-widest" data-i18n="nav.brand">Jean Prouvé</span>
+
+    <!-- Desktop: lang + cta -->
+    <div class="hidden sm:flex items-center gap-3" id="desktop-lang">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ja')">JA</button>
+      <button class="lang-btn" onclick="setLang('fr')">FR</button>
+      <a href="#inquire" class="btn ml-4" style="padding:10px 24px;min-height:40px;" data-i18n="nav.inquire">Inquire</a>
+    </div>
+    <!-- Mobile: hamburger -->
+    <div class="flex items-center gap-3 sm:hidden">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ja')">JA</button>
+      <button class="lang-btn" onclick="setLang('fr')">FR</button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────── -->
+  <section class="relative min-h-screen flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-16 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="photos/IMG_9375.jpeg" alt="Jean Prouvé Brise-Soleil"
+           class="w-full h-full object-cover opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-t from-void via-void/55 to-void/15"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl">
+      <p class="font-mono text-steel text-xs tracking-widest mb-6 md:mb-8" data-i18n="hero.badge">
+        001 — UNIQUE ARCHITECTURAL OBJECT
+      </p>
+      <h1 class="font-display text-chalk font-light leading-none mb-4 md:mb-6"
+          style="font-size:clamp(48px,10vw,120px);">
+        Brise-Soleil
+      </h1>
+      <div class="flex items-center gap-4 mb-8 md:mb-10">
+        <div class="rule"></div>
+        <p class="font-display text-warm italic font-light" style="font-size:clamp(16px,2.5vw,22px);"
+           data-i18n="hero.subtitle">Sun Shutter System</p>
+      </div>
+      <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-sm md:max-w-xl">
+        <div>
+          <p class="font-mono text-steel text-xs tracking-widest mb-1" data-i18n="hero.artist.label">ARTIST</p>
+          <p class="font-display text-chalk font-light" style="font-size:clamp(14px,2vw,18px);" data-i18n="hero.artist.value">Jean Prouvé</p>
+        </div>
+        <div>
+          <p class="font-mono text-steel text-xs tracking-widest mb-1" data-i18n="hero.circa.label">CIRCA</p>
+          <p class="font-display text-chalk font-light" style="font-size:clamp(14px,2vw,18px);" data-i18n="hero.circa.value">1950s</p>
+        </div>
+        <div>
+          <p class="font-mono text-steel text-xs tracking-widest mb-1" data-i18n="hero.origin.label">ORIGIN</p>
+          <p class="font-display text-chalk font-light" style="font-size:clamp(14px,2vw,18px);" data-i18n="hero.origin.value">Cameroon</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 right-8 md:right-12 flex flex-col items-center gap-2 z-10 hidden md:flex">
+      <span class="font-mono text-steel text-xs tracking-widest" style="writing-mode:vertical-rl;" data-i18n="gallery.scroll">SCROLL</span>
+      <div class="w-px h-14 bg-gradient-to-b from-steel to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ── PROVENANCE ────────────────────────────────────── -->
+  <section class="py-20 md:py-36 px-6 md:px-16 max-w-7xl mx-auto">
+    <p class="font-mono text-steel text-xs tracking-widest mb-10 md:mb-14" data-i18n="prov.badge">002 — PROVENANCE</p>
+    <div class="grid md:grid-cols-2 gap-12 md:gap-24">
+      <div>
+        <blockquote class="font-display text-chalk font-light leading-tight mb-6"
+                    style="font-size:clamp(24px,3.5vw,42px);"
+                    data-i18n-html="prov.quote">
+          "Structure is not a constraint.<br>It is the logic of beauty."
+        </blockquote>
+        <p class="font-mono text-steel2 text-xs tracking-widest" data-i18n="prov.quote.attr">— Jean Prouvé</p>
+      </div>
+      <div class="flex flex-col justify-center gap-5">
+        <p class="text-warm text-sm leading-loose" data-i18n="prov.p1">
+          Salvaged from a primary school building in Cameroon — one of the many prefabricated structures constructed under post-war French modernist architecture programmes — this Brise-Soleil panel represents Prouvé at his most structurally honest.
+        </p>
+        <p class="text-warm text-sm leading-loose" data-i18n="prov.p2">
+          Discovered and rescued by Brice Bérard (<span class="text-steel2">@briceberardantiques</span>), the piece was subsequently acquired and presented by <span class="text-steel2">found Ltd., Okayama</span> — the Japanese design house known for bridging raw European industrial design with the Japanese wabi-sabi aesthetic.
+        </p>
+        <p class="text-warm text-sm leading-loose" data-i18n="prov.p3">
+          Prouvé's corrugated aluminium louvres, pressed from industrial sheet stock and mounted on a welded steel frame, remain intact. The patina of seven decades in equatorial light is irreversible — and irreplaceable.
+        </p>
+        <div class="rule mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ───────────────────────────────────────── -->
+  <section class="px-1 md:px-3 mb-1 md:mb-3">
+    <div class="gallery-grid">
+      <div class="gallery-cell g1"><img src="photos/IMG_9385.jpeg" alt="Original school in Cameroon — historical documentation" loading="lazy"></div>
+      <div class="gallery-cell g2"><img src="photos/IMG_9375.jpeg" alt="Brise-Soleil panel — frontal view" loading="lazy"></div>
+      <div class="gallery-cell g3"><img src="photos/IMG_3864.jpeg" alt="Aluminium surface with light" loading="lazy"></div>
+      <div class="gallery-cell g4"><img src="photos/IMG_9433.jpeg" alt="Louvres — angled view" loading="lazy"></div>
+      <div class="gallery-cell g5"><img src="photos/IMG_9434.jpeg" alt="Pressed aluminium texture" loading="lazy"></div>
+      <div class="gallery-cell g6"><img src="photos/IMG_9382.jpeg" alt="Steel frame detail" loading="lazy"></div>
+      <div class="gallery-cell g7"><img src="photos/IMG_8774.jpeg" alt="Installed at found Ltd., Okayama" loading="lazy"></div>
+      <div class="gallery-cell g8"><img src="photos/IMG_3634.jpeg" alt="Japanese timber interior context" loading="lazy"></div>
+      <div class="gallery-cell g9"><img src="photos/IMG_3520.jpeg" alt="Daytime interior — full environment" loading="lazy"></div>
+      <div class="gallery-cell g10"><img src="photos/IMG_6708.jpeg" alt="Evening interior — atmospheric" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- ── SPECIFICATIONS ───────────────────────────────── -->
+  <section class="py-20 md:py-36 px-6 md:px-16 max-w-4xl mx-auto">
+    <p class="font-mono text-steel text-xs tracking-widest mb-10 md:mb-14" data-i18n="spec.badge">003 — SPECIFICATIONS</p>
+    <div class="spec-row"><span class="spec-key" data-i18n="spec.artist">Artist</span><span class="spec-val font-display text-xl font-light" data-i18n="spec.artist.val">Jean Prouvé (1901–1984)</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="spec.title">Title</span><span class="spec-val font-display text-xl italic font-light" data-i18n="spec.title.val">Brise-Soleil (Sun Shutter)</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="spec.date">Date</span><span class="spec-val" data-i18n="spec.date.val">c. 1950s</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="spec.medium">Medium</span><span class="spec-val" data-i18n="spec.medium.val">Corrugated pressed aluminium, welded steel frame, industrial rivets</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="spec.origin">Origin</span><span class="spec-val" data-i18n="spec.origin.val">Primary school building, Cameroon</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="spec.condition">Condition</span><span class="spec-val" data-i18n="spec.condition.val">Original patina intact. All louvre panels, frame, and mounting hardware present. Minor surface oxidation consistent with age and equatorial climate exposure.</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="spec.provenance">Provenance</span><span class="spec-val" data-i18n-html="spec.provenance.val">Salvaged: Brice Bérard (@briceberardantiques)<br>Acquired & presented: found Ltd., Okayama (@foundltd)</span></div>
+    <div class="spec-row"><span class="spec-key" data-i18n="spec.category">Category</span><span class="spec-val" data-i18n="spec.category.val">Architectural Element / Design Object / Museum-grade Collectible</span></div>
+    <div class="spec-row" style="border-bottom:none;"><span class="spec-key" data-i18n="spec.location">Location</span><span class="spec-val" data-i18n="spec.location.val">found Ltd., Okayama, Japan</span></div>
+  </section>
+
+  <!-- ── DIGITAL PROVENANCE ───────────────────────────── -->
+  <section class="py-10 px-6 md:px-16 max-w-4xl mx-auto">
+    <p class="font-mono text-steel text-xs tracking-widest mb-8" data-i18n="chain.badge">004 — DIGITAL PROVENANCE</p>
+    <div class="chain-block">
+      <div class="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
+        <div class="flex-1">
+          <h3 class="font-display text-chalk text-2xl font-light mb-3" data-i18n="chain.title">On-Chain Certificate</h3>
+          <p class="text-warm text-sm leading-loose" data-i18n="chain.desc">A digital twin of this physical object is being issued as an ERC-721 token on the Ethereum mainnet — encoding provenance, authenticity, and ownership history into an immutable public ledger.</p>
+        </div>
+        <span class="chain-badge self-start" data-i18n="chain.status">Pending Issuance</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.contract.label">CONTRACT ADDRESS</p>
+          <p class="chain-address">0x — — — — — — — — — — — —<br><span class="text-steel opacity-60">[ To be assigned ]</span></p>
+        </div>
+        <div>
+          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.token.label">TOKEN STANDARD</p>
+          <p class="chain-address">ERC-721 / Ethereum Mainnet<br><span class="text-steel opacity-60">Metadata: IPFS</span></p>
+        </div>
+        <div>
+          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.id.label">TOKEN ID</p>
+          <p class="chain-address">001 / 1<br><span class="text-steel opacity-60">[ 1 of 1 ]</span></p>
+        </div>
+        <div>
+          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.hash.label">PROVENANCE HASH</p>
+          <p class="chain-address">SHA-256: pending<br><span class="text-steel opacity-60">[ Physical + digital ]</span></p>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-white/5">
+        <p class="text-warm text-xs leading-loose" data-i18n="chain.footer">The digital certificate travels with the physical object. Upon acquisition, ownership of the NFT is transferred alongside the artwork.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTEXT ───────────────────────────────────────── -->
+  <section class="py-20 md:py-28 px-6 md:px-16 max-w-4xl mx-auto border-t border-white/5">
+    <p class="font-mono text-steel text-xs tracking-widest mb-10 md:mb-14" data-i18n="context.badge">005 — CONTEXT</p>
+    <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+      <div>
+        <h3 class="font-display text-chalk font-light mb-5" style="font-size:clamp(20px,3vw,28px);" data-i18n="context.h1">The Infinite Garden Logic</h3>
+        <p class="text-warm text-sm leading-loose mb-4" data-i18n="context.p1">Prouvé believed buildings should be assembled, not constructed — each component a resolved object in its own right. The Brise-Soleil was not decoration. It was climate logic made physical.</p>
+        <p class="text-warm text-sm leading-loose" data-i18n="context.p2">That disassembly is precisely what saved this piece. Seventy years later, the same modularity that defined Prouvé's industrial philosophy allowed it to cross continents again.</p>
+      </div>
+      <div>
+        <h3 class="font-display text-chalk font-light mb-5" style="font-size:clamp(20px,3vw,28px);" data-i18n="context.h2">Why It Matters Now</h3>
+        <p class="text-warm text-sm leading-loose mb-4" data-i18n="context.p3">In a market saturated with edition prints and digital speculation, objects like this carry something irreducible: physical proof of time, process, and place. The oxidation on the steel frame is not damage — it is documentation.</p>
+        <p class="text-warm text-sm leading-loose" data-i18n="context.p4">For the Web3-native collector, the provenance chain aligns naturally with blockchain logic. For the traditional collector, it is simply one of the most significant Prouvé objects to surface in Japan in recent memory.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACQUISITION ───────────────────────────────────── -->
+  <section id="inquire" class="py-24 md:py-36 px-6 md:px-16 text-center border-t border-white/5">
+    <p class="font-mono text-steel text-xs tracking-widest mb-6 md:mb-8" data-i18n="acq.badge">006 — ACQUISITION</p>
+    <h2 class="font-display text-chalk font-light leading-tight mb-6"
+        style="font-size:clamp(28px,6vw,70px);" data-i18n="acq.title">Available for Acquisition</h2>
+    <p class="text-warm text-sm max-w-sm mx-auto mb-10 leading-loose whitespace-pre-line" data-i18n="acq.desc">Enquiries via found Ltd., Okayama.
+Serious collectors only. Viewing by appointment.</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+      <a href="https://www.instagram.com/foundltd" target="_blank" rel="noopener"
+         class="btn w-full sm:w-auto" data-i18n="acq.cta1">Contact found Ltd.</a>
+      <a href="https://www.instagram.com/briceberardantiques" target="_blank" rel="noopener"
+         class="btn btn-secondary w-full sm:w-auto" data-i18n="acq.cta2">Provenance: @briceberardantiques</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────── -->
+  <footer class="border-t border-white/5 py-10 md:py-14 px-6 md:px-16">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+      <div>
+        <p class="font-display text-chalk text-xl font-light tracking-widest mb-1" data-i18n="nav.brand">Jean Prouvé</p>
+        <p class="font-mono text-steel text-xs tracking-widest" data-i18n="footer.sub">Brise-Soleil — c.1950s — 1 of 1</p>
+      </div>
+      <div class="font-mono text-steel text-xs tracking-widest space-y-1 text-left md:text-right">
+        <p data-i18n="footer.presented">Presented by found Ltd., Okayama</p>
+        <p data-i18n="footer.handles">@foundltd · @briceberardantiques</p>
+        <p class="mt-2 opacity-30" data-i18n="footer.copy">© 2026 found Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SCRIPT ────────────────────────────────────────── -->
+  <script>
+  /* ── i18n translations ── */
+  const T = {
+    en: {
+      'nav.brand':'Jean Prouvé','nav.subtitle':'c. 1950s — Cameroon','nav.inquire':'Inquire',
+      'hero.badge':'001 — UNIQUE ARCHITECTURAL OBJECT','hero.subtitle':'Sun Shutter System',
+      'hero.artist.label':'ARTIST','hero.artist.value':'Jean Prouvé',
+      'hero.circa.label':'CIRCA','hero.circa.value':'1950s',
+      'hero.origin.label':'ORIGIN','hero.origin.value':'Cameroon',
+      'prov.badge':'002 — PROVENANCE',
+      'prov.quote':'"Structure is not a constraint.<br>It is the logic of beauty."',
+      'prov.quote.attr':'— Jean Prouvé',
+      'prov.p1':'Salvaged from a primary school building in Cameroon — one of the many prefabricated structures constructed under post-war French modernist architecture programmes — this Brise-Soleil panel represents Prouvé at his most structurally honest.',
+      'prov.p2':'Discovered and rescued by Brice Bérard (@briceberardantiques), the piece was subsequently acquired and presented by found Ltd., Okayama — the Japanese design house known for bridging raw European industrial design with the Japanese wabi-sabi aesthetic.',
+      'prov.p3':'Prouvé\'s corrugated aluminium louvres, pressed from industrial sheet stock and mounted on a welded steel frame, remain intact. The patina of seven decades in equatorial light is irreversible — and irreplaceable.',
+      'spec.badge':'003 — SPECIFICATIONS',
+      'spec.artist':'Artist','spec.title':'Title','spec.date':'Date','spec.medium':'Medium',
+      'spec.origin':'Origin','spec.condition':'Condition','spec.provenance':'Provenance',
+      'spec.category':'Category','spec.location':'Location',
+      'spec.artist.val':'Jean Prouvé (1901–1984)',
+      'spec.title.val':'Brise-Soleil (Sun Shutter)',
+      'spec.date.val':'c. 1950s',
+      'spec.medium.val':'Corrugated pressed aluminium, welded steel frame, industrial rivets',
+      'spec.origin.val':'Primary school building, Cameroon',
+      'spec.condition.val':'Original patina intact. All louvre panels, frame, and mounting hardware present. Minor surface oxidation consistent with age and equatorial climate exposure.',
+      'spec.provenance.val':'Salvaged: Brice Bérard (@briceberardantiques)<br>Acquired & presented: found Ltd., Okayama (@foundltd)',
+      'spec.category.val':'Architectural Element / Design Object / Museum-grade Collectible',
+      'spec.location.val':'found Ltd., Okayama, Japan',
+      'chain.badge':'004 — DIGITAL PROVENANCE','chain.title':'On-Chain Certificate',
+      'chain.desc':'A digital twin of this physical object is being issued as an ERC-721 token on the Ethereum mainnet — encoding provenance, authenticity, and ownership history into an immutable public ledger.',
+      'chain.status':'Pending Issuance','chain.contract.label':'CONTRACT ADDRESS',
+      'chain.token.label':'TOKEN STANDARD','chain.id.label':'TOKEN ID','chain.hash.label':'PROVENANCE HASH',
+      'chain.footer':'The digital certificate travels with the physical object. Upon acquisition, ownership of the NFT is transferred alongside the artwork.',
+      'context.badge':'005 — CONTEXT','context.h1':'The Infinite Garden Logic',
+      'context.p1':'Prouvé believed buildings should be assembled, not constructed — each component a resolved object in its own right. The Brise-Soleil was not decoration. It was climate logic made physical.',
+      'context.p2':'That disassembly is precisely what saved this piece. Seventy years later, the same modularity that defined Prouvé\'s industrial philosophy allowed it to cross continents again.',
+      'context.h2':'Why It Matters Now',
+      'context.p3':'In a market saturated with edition prints and digital speculation, objects like this carry something irreducible: physical proof of time, process, and place. The oxidation on the steel frame is not damage — it is documentation.',
+      'context.p4':'For the Web3-native collector, the provenance chain aligns naturally with blockchain logic. For the traditional collector, it is simply one of the most significant Prouvé objects to surface in Japan in recent memory.',
+      'acq.badge':'006 — ACQUISITION','acq.title':'Available for Acquisition',
+      'acq.desc':'Enquiries via found Ltd., Okayama.\nSerious collectors only. Viewing by appointment.',
+      'acq.cta1':'Contact found Ltd.','acq.cta2':'Provenance: @briceberardantiques',
+      'footer.sub':'Brise-Soleil — c.1950s — 1 of 1',
+      'footer.presented':'Presented by found Ltd., Okayama',
+      'footer.handles':'@foundltd · @briceberardantiques',
+      'footer.copy':'© 2026 found Ltd. All rights reserved.',
+      'gallery.scroll':'SCROLL',
+    },
+    ja: {
+      'nav.brand':'Jean Prouvé','nav.subtitle':'c. 1950s — カメルーン','nav.inquire':'お問い合わせ',
+      'hero.badge':'001 — 唯一無二の建築オブジェ','hero.subtitle':'日除けシステム',
+      'hero.artist.label':'アーティスト','hero.artist.value':'ジャン・プルーヴェ',
+      'hero.circa.label':'年代','hero.circa.value':'1950年代',
+      'hero.origin.label':'原産地','hero.origin.value':'カメルーン',
+      'prov.badge':'002 — 来歴',
+      'prov.quote':'「構造は制約ではない。<br>美の論理である。」',
+      'prov.quote.attr':'— ジャン・プルーヴェ',
+      'prov.p1':'戦後フランス近代建築プログラムの一環として建設された、カメルーンの小学校から救出されたブリーズ・ソレイユ。プルーヴェの建築思想が最も純粋に体現された作品のひとつです。',
+      'prov.p2':'ブリス・ベラール（@briceberardantiques）によって発見・救出されたこの作品は、その後、岡山を拠点とするデザインハウス「found Ltd.」(@foundltd) に引き継がれ、現在展示されています。',
+      'prov.p3':'波形アルミニウム・ルーバーは溶接スチールフレームに取り付けられた状態のまま現存。赤道直下の陽光を受け続けた70年分のパティーナは、不可逆的な美の証明です。',
+      'spec.badge':'003 — 仕様',
+      'spec.artist':'アーティスト','spec.title':'タイトル','spec.date':'年代','spec.medium':'素材',
+      'spec.origin':'原産地','spec.condition':'状態','spec.provenance':'プロヴナンス',
+      'spec.category':'カテゴリー','spec.location':'所在地',
+      'spec.artist.val':'ジャン・プルーヴェ（1901–1984）',
+      'spec.title.val':'ブリーズ・ソレイユ（日除けパネル）',
+      'spec.date.val':'1950年代頃',
+      'spec.medium.val':'波形プレスアルミニウム、溶接スチールフレーム、工業用リベット',
+      'spec.origin.val':'カメルーン小学校建築物',
+      'spec.condition.val':'オリジナルのパティーナを保持。ルーバーパネル、フレーム、取付金具すべて現存。年代および気候への露出に伴う軽微な表面酸化あり。',
+      'spec.provenance.val':'救出：ブリス・ベラール（@briceberardantiques）<br>取得・展示：found Ltd.、岡山（@foundltd）',
+      'spec.category.val':'建築エレメント / デザインオブジェ / 美術館級コレクター作品',
+      'spec.location.val':'found Ltd.、岡山',
+      'chain.badge':'004 — デジタル・プロヴナンス','chain.title':'オンチェーン証明書',
+      'chain.desc':'この作品のデジタルツインがERC-721トークンとしてイーサリアムメインネット上で発行予定です。来歴・真正性・所有権の履歴を不変の公開台帳に刻み込みます。',
+      'chain.status':'発行準備中','chain.contract.label':'コントラクトアドレス',
+      'chain.token.label':'トークン規格','chain.id.label':'トークンID','chain.hash.label':'プロヴナンスハッシュ',
+      'chain.footer':'デジタル証明書は物理的な作品とともに移転します。取得の際、NFTの所有権も作品と同時に譲渡されます。',
+      'context.badge':'005 — コンテクスト','context.h1':'インフィニット・ガーデンの論理',
+      'context.p1':'プルーヴェは建築は組み立てるものだと考えていました。各コンポーネントはそれ自体で完結したオブジェクト。ブリーズ・ソレイユは装飾ではありません。気候の論理を物理的に体現したものです。',
+      'context.p2':'解体可能な設計こそが、この作品を救いました。70年後、同じモジュール性が再び大陸を越えることを可能にしたのです。',
+      'context.h2':'なぜ今、重要なのか',
+      'context.p3':'エディションプリントとデジタル投機が溢れる市場において、このオブジェクトは不可逆的なものを持っています。時間・プロセス・場所の物理的な証明。スチールフレームの酸化は損傷ではありません——記録です。',
+      'context.p4':'Web3ネイティブなコレクターにとって、プロヴナンスチェーンはブロックチェーンの論理と自然に合致します。従来のコレクターにとっては、近年日本に現れた最も重要なプルーヴェ作品のひとつです。',
+      'acq.badge':'006 — 取得','acq.title':'ご購入のご相談',
+      'acq.desc':'found Ltd.（岡山）を通じてお問い合わせください。\nシリアスなコレクターの方限定。内覧は予約制。',
+      'acq.cta1':'found Ltd. に問い合わせる','acq.cta2':'プロヴナンス：@briceberardantiques',
+      'footer.sub':'ブリーズ・ソレイユ — 1950年代 — 1点限り',
+      'footer.presented':'found Ltd.（岡山）提供',
+      'footer.handles':'@foundltd · @briceberardantiques',
+      'footer.copy':'© 2026 found Ltd. All rights reserved.',
+      'gallery.scroll':'スクロール',
+    },
+    fr: {
+      'nav.brand':'Jean Prouvé','nav.subtitle':'c. 1950s — Cameroun','nav.inquire':'Renseignements',
+      'hero.badge':'001 — OBJET ARCHITECTURAL UNIQUE','hero.subtitle':'Système Brise-Soleil',
+      'hero.artist.label':'ARTISTE','hero.artist.value':'Jean Prouvé',
+      'hero.circa.label':'ÉPOQUE','hero.circa.value':'Années 1950',
+      'hero.origin.label':'ORIGINE','hero.origin.value':'Cameroun',
+      'prov.badge':'002 — PROVENANCE',
+      'prov.quote':'« La structure n\'est pas une contrainte.<br>C\'est la logique du beau. »',
+      'prov.quote.attr':'— Jean Prouvé',
+      'prov.p1':'Sauvegardé d\'un bâtiment scolaire au Cameroun — l\'une des nombreuses structures préfabriquées des programmes d\'architecture moderniste française d\'après-guerre — ce panneau Brise-Soleil représente Prouvé dans sa vérité structurelle la plus pure.',
+      'prov.p2':'Découvert par Brice Bérard (@briceberardantiques), la pièce a été acquise et présentée par found Ltd., Okayama — la maison de design japonaise reconnue pour son dialogue entre le brutalisme industriel européen et l\'esthétique wabi-sabi.',
+      'prov.p3':'Les lames en aluminium ondulé de Prouvé, montées sur un cadre en acier soudé, sont intactes. La patine de sept décennies sous la lumière équatoriale est irréversible — et irremplaçable.',
+      'spec.badge':'003 — SPÉCIFICATIONS',
+      'spec.artist':'Artiste','spec.title':'Titre','spec.date':'Date','spec.medium':'Matériau',
+      'spec.origin':'Origine','spec.condition':'État','spec.provenance':'Provenance',
+      'spec.category':'Catégorie','spec.location':'Lieu',
+      'spec.artist.val':'Jean Prouvé (1901–1984)',
+      'spec.title.val':'Brise-Soleil (Système pare-soleil)',
+      'spec.date.val':'c. Années 1950',
+      'spec.medium.val':'Aluminium ondulé pressé, cadre en acier soudé, rivets industriels',
+      'spec.origin.val':'Bâtiment scolaire, Cameroun',
+      'spec.condition.val':'Patine d\'origine intacte. Tous les panneaux, cadre et quincaillerie présents. Légère oxydation superficielle conforme à l\'âge et à l\'exposition climatique.',
+      'spec.provenance.val':'Sauvegardé : Brice Bérard (@briceberardantiques)<br>Acquis & présenté : found Ltd., Okayama (@foundltd)',
+      'spec.category.val':'Élément architectural / Objet de design / Collection de niveau muséal',
+      'spec.location.val':'found Ltd., Okayama, Japon',
+      'chain.badge':'004 — PROVENANCE NUMÉRIQUE','chain.title':'Certificat On-Chain',
+      'chain.desc':'Un jumeau numérique de cet objet sera émis sous forme de token ERC-721 sur le mainnet Ethereum — inscrivant la provenance, l\'authenticité et l\'historique de propriété dans un registre public immuable.',
+      'chain.status':'Émission en cours','chain.contract.label':'ADRESSE DU CONTRAT',
+      'chain.token.label':'STANDARD TOKEN','chain.id.label':'ID TOKEN','chain.hash.label':'HASH PROVENANCE',
+      'chain.footer':'Le certificat numérique accompagne l\'objet physique. Lors de l\'acquisition, la propriété du NFT est transférée avec l\'œuvre.',
+      'context.badge':'005 — CONTEXTE','context.h1':'La Logique du Jardin Infini',
+      'context.p1':'Prouvé croyait que les bâtiments devaient être assemblés, pas construits — chaque composant étant un objet résolu en lui-même. Le Brise-Soleil n\'était pas une décoration. C\'était la logique climatique rendue physique.',
+      'context.p2':'Ce démontage est précisément ce qui a sauvé cette pièce. Soixante-dix ans plus tard, la même modularité a permis à l\'œuvre de traverser à nouveau les continents.',
+      'context.h2':'Pourquoi Cela Compte Aujourd\'hui',
+      'context.p3':'Dans un marché saturé d\'éditions imprimées et de spéculation numérique, des objets comme celui-ci portent quelque chose d\'irréductible : une preuve physique du temps, du processus et du lieu.',
+      'context.p4':'Pour le collectionneur natif Web3, la chaîne de provenance s\'aligne naturellement avec la logique blockchain. Pour le collectionneur traditionnel, c\'est l\'un des objets Prouvé les plus significatifs à avoir émergé au Japon.',
+      'acq.badge':'006 — ACQUISITION','acq.title':'Disponible à l\'Acquisition',
+      'acq.desc':'Renseignements via found Ltd., Okayama.\nCollectionneurs sérieux uniquement. Visite sur rendez-vous.',
+      'acq.cta1':'Contacter found Ltd.','acq.cta2':'Provenance : @briceberardantiques',
+      'footer.sub':'Brise-Soleil — c.1950s — Pièce unique',
+      'footer.presented':'Présenté par found Ltd., Okayama',
+      'footer.handles':'@foundltd · @briceberardantiques',
+      'footer.copy':'© 2026 found Ltd. Tous droits réservés.',
+      'gallery.scroll':'DÉFILER',
+    }
+  };
+
+  let currentLang = localStorage.getItem('prouve_lang') || 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('prouve_lang', lang);
+    document.documentElement.lang = lang;
+
+    // Update buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+    });
+
+    // Update text nodes
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (T[lang][key]) el.textContent = T[lang][key];
+    });
+
+    // Update innerHTML nodes (for <br> etc.)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (T[lang][key]) el.innerHTML = T[lang][key];
+    });
+  }
+
+  // Init
+  setLang(currentLang);
+
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // Scroll to top
+  if (history.scrollRestoration) history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+  </script>
+
+</body>
+</html>

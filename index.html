@@ -79,7 +79,8 @@
       grid-template-columns:repeat(12,1fr);
       gap:3px;
     }
-    .g1  { grid-column:1/8;  grid-row:1; }
+    .g1a { grid-column:1/5;  grid-row:1; }
+    .g1b { grid-column:5/8;  grid-row:1; }
     .g2  { grid-column:8/13; grid-row:1; }
     .g3  { grid-column:1/5;  grid-row:2; }
     .g4  { grid-column:5/9;  grid-row:2; }
@@ -99,18 +100,18 @@
     @media (hover:hover) {
       .gallery-cell:hover img { filter:grayscale(0%); transform:scale(1.03); }
     }
-    .g1 img,.g9 img,.g10 img { height:440px; }
+    .g1a img,.g1b img,.g9 img,.g10 img { height:440px; }
     .g2 img,.g7 img { height:440px; }
     .g3 img,.g4 img,.g5 img,.g6 img,.g8 img { height:300px; }
 
     /* Mobile gallery */
     @media(max-width:768px){
       .gallery-grid { grid-template-columns:1fr 1fr; gap:2px; }
-      .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10 {
+      .g1a,.g1b,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10 {
         grid-column:auto; grid-row:auto;
       }
       .gallery-cell img { height:180px !important; }
-      .g1 img,.g9 img { height:240px !important; }
+      .g1a img,.g1b img,.g9 img { height:240px !important; }
     }
     @media(max-width:480px){
       .gallery-cell img { height:150px !important; }
@@ -290,7 +291,8 @@
   <!-- ── GALLERY ───────────────────────────────────────── -->
   <section class="px-1 md:px-3 mb-1 md:mb-3">
     <div class="gallery-grid">
-      <div class="gallery-cell g1"><img src="photos/IMG_9385.jpeg" alt="Original school in Cameroon — historical documentation" loading="lazy"></div>
+      <div class="gallery-cell g1a"><img src="photos/IMG_9516.jpeg" alt="School building, Cameroon — historical photograph" loading="lazy"></div>
+      <div class="gallery-cell g1b"><img src="photos/IMG_9515.jpeg" alt="Brise-Soleil installed on school facade, Cameroon" loading="lazy"></div>
       <div class="gallery-cell g2"><img src="photos/IMG_9375.jpeg" alt="Brise-Soleil panel — frontal view" loading="lazy"></div>
       <div class="gallery-cell g3"><img src="photos/IMG_3864.jpeg" alt="Aluminium surface with light" loading="lazy"></div>
       <div class="gallery-cell g4"><img src="photos/IMG_9433.jpeg" alt="Louvres — angled view" loading="lazy"></div>

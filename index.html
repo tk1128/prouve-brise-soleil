@@ -761,6 +761,8 @@ Serious collectors only. Viewing by appointment.</p>
     `).join('');
   }
 
+  const faqBadge = { en:'007 — COLLECTOR FAQ', ja:'007 — コレクター FAQ', fr:'007 — FAQ COLLECTIONNEURS' };
+
   let currentLang = localStorage.getItem('prouve_lang') || 'en';
 
   function setLang(lang) {
@@ -768,7 +770,7 @@ Serious collectors only. Viewing by appointment.</p>
     localStorage.setItem('prouve_lang', lang);
     document.documentElement.lang = lang;
 
-    // Update buttons
+    // Update lang buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
     });
@@ -776,23 +778,20 @@ Serious collectors only. Viewing by appointment.</p>
     // Update text nodes
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (T[lang][key]) el.textContent = T[lang][key];
+      if (T[lang] && T[lang][key]) el.textContent = T[lang][key];
     });
 
     // Update innerHTML nodes (for <br> etc.)
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const key = el.getAttribute('data-i18n-html');
-      if (T[lang][key]) el.innerHTML = T[lang][key];
+      if (T[lang] && T[lang][key]) el.innerHTML = T[lang][key];
     });
-  }
 
-  const faqBadge = { en:'007 — COLLECTOR FAQ', ja:'007 — コレクター FAQ', fr:'007 — FAQ COLLECTIONNEURS' };
-
-  const _origSetLang = setLang;
-  function setLang(lang) {
-    _origSetLang(lang);
+    // Render FAQ section
     renderFAQ(lang);
-    const badge = document.querySelector('#faq-list')?.closest('section')?.querySelector('[data-i18n="faq.badge"]');
+
+    // Update FAQ badge
+    const badge = document.querySelector('[data-i18n="faq.badge"]');
     if (badge) badge.textContent = faqBadge[lang] || faqBadge.en;
   }
 

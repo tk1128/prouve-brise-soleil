@@ -274,6 +274,39 @@
     }
     .spec-val { font-size:14px; color:#FBFBFA; line-height:1.7; }
 
+    /* ── Axiom section ── */
+    .axiom-section { position:relative; overflow:hidden; }
+    .axiom-section::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse 80% 60% at 50% 50%, rgba(107,127,142,.06) 0%, transparent 70%);
+      pointer-events:none;
+    }
+
+    /* ── Loop nodes ── */
+    .loop-node {
+      border:1px solid rgba(255,255,255,.06);
+      padding:clamp(24px,4vw,40px);
+      display:flex; flex-direction:column;
+      transition:border-color .4s;
+      position:relative;
+    }
+    .loop-node:hover { border-color:rgba(107,127,142,.35); }
+    .loop-node-link {
+      font-family:'JetBrains Mono',monospace;
+      font-size:9px; letter-spacing:.22em; text-transform:uppercase;
+      color:#6B7F8E; text-decoration:none;
+      border-bottom:1px solid rgba(107,127,142,.3);
+      padding-bottom:2px;
+      transition:color .3s, border-color .3s;
+    }
+    .loop-node-link:hover { color:#FBFBFA; border-color:#8FA3B1; }
+    .loop-arrow {
+      display:flex; align-items:center; justify-content:center;
+      color:rgba(107,127,142,.25); font-size:18px;
+      padding:0 8px; flex-shrink:0;
+    }
+    @media(max-width:768px){ .loop-arrow { transform:rotate(90deg); padding:8px 0; } }
+
     /* ── Chain block ── */
     .chain-block {
       border:1px solid rgba(107,127,142,.3);
@@ -429,6 +462,24 @@
     </div>
   </section>
 
+  <!-- ── AXIOM ─────────────────────────────────────────── -->
+  <section class="axiom-section py-36 md:py-60 px-6 border-t border-white/5 text-center">
+    <p class="font-mono text-steel text-xs tracking-widest mb-14 md:mb-20" data-i18n="axiom.badge">— THE AXIOM —</p>
+    <h2 class="font-display text-chalk font-light leading-none mx-auto mb-10"
+        style="font-size:clamp(40px,9vw,108px); max-width:960px; letter-spacing:-0.02em;"
+        data-i18n-html="axiom.statement">
+      Pure Experience<br>is the only afterlife.
+    </h2>
+    <div class="rule mx-auto mb-10"></div>
+    <p class="font-display text-warm font-light italic mx-auto mb-12"
+       style="font-size:clamp(14px,2vw,20px); max-width:580px; line-height:2.1;"
+       data-i18n="axiom.sub">
+      The most valuable thing is not the object. Not the documentation. Not the price.<br>
+      It is the irreducible moment of encounter — the sense of having been fully present, of having been here.
+    </p>
+    <p class="font-mono text-steel tracking-widest" style="font-size:13px; letter-spacing:0.45em;" data-i18n="axiom.kana">純粋経験</p>
+  </section>
+
   <!-- ── GALLERY ───────────────────────────────────────── -->
   <section class="px-1 md:px-3 mb-1 md:mb-3">
     <div class="gallery-grid">
@@ -496,19 +547,19 @@
     </div>
   </section>
 
-  <!-- ── CONTEXT ───────────────────────────────────────── -->
-  <section class="py-20 md:py-28 px-6 md:px-16 max-w-4xl mx-auto border-t border-white/5">
-    <p class="font-mono text-steel text-xs tracking-widest mb-10 md:mb-14" data-i18n="context.badge">005 — CONTEXT</p>
-    <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+  <!-- ── PURE EXPERIENCE ──────────────────────────────── -->
+  <section class="py-24 md:py-40 px-6 md:px-16 max-w-4xl mx-auto border-t border-white/5">
+    <p class="font-mono text-steel text-xs tracking-widest mb-10 md:mb-14" data-i18n="context.badge">005 — THE PURE EXPERIENCE</p>
+    <div class="grid md:grid-cols-2 gap-12 md:gap-20">
       <div>
-        <h3 class="font-display text-chalk font-light mb-5" style="font-size:clamp(20px,3vw,28px);" data-i18n="context.h1">The Infinite Garden Logic</h3>
-        <p class="text-warm text-sm leading-loose mb-4" data-i18n="context.p1">Prouvé believed buildings should be assembled, not constructed — each component a resolved object in its own right. The Brise-Soleil was not decoration. It was climate logic made physical.</p>
-        <p class="text-warm text-sm leading-loose" data-i18n="context.p2">That disassembly is precisely what saved this piece. Seventy years later, the same modularity that defined Prouvé's industrial philosophy allowed it to cross continents again.</p>
+        <h3 class="font-display text-chalk font-light mb-5" style="font-size:clamp(20px,3vw,30px);" data-i18n="context.h1">Why Pure Experience is the Afterlife</h3>
+        <p class="text-warm text-sm leading-loose mb-4" data-i18n="context.p1">Nishida Kitarō defined pure experience as direct, unmediated encounter — the moment before subject and object divide. Prouvé understood this without naming it: his structures were not designed to be looked at. They were designed to be lived inside.</p>
+        <p class="text-warm text-sm leading-loose" data-i18n="context.p2">The Brise-Soleil does not exist to be owned. It exists to be present. To cast its shadow on the floor each morning. To change the temperature of a room. To make the body aware of time without the use of a clock.</p>
       </div>
       <div>
-        <h3 class="font-display text-chalk font-light mb-5" style="font-size:clamp(20px,3vw,28px);" data-i18n="context.h2">Why It Matters Now</h3>
-        <p class="text-warm text-sm leading-loose mb-4" data-i18n="context.p3">In a market saturated with edition prints and digital speculation, objects like this carry something irreducible: physical proof of time, process, and place. The oxidation on the steel frame is not damage — it is documentation.</p>
-        <p class="text-warm text-sm leading-loose" data-i18n="context.p4">For the Web3-native collector, the provenance chain aligns naturally with blockchain logic. For the traditional collector, it is simply one of the most significant Prouvé objects to surface in Japan in recent memory.</p>
+        <h3 class="font-display text-chalk font-light mb-5" style="font-size:clamp(20px,3vw,30px);" data-i18n="context.h2">Involvement as the Highest Value</h3>
+        <p class="text-warm text-sm leading-loose mb-4" data-i18n="context.p3">What we call ownership here is more precisely: participation. To acquire this object is to join an ongoing experience — a continuous loop of encounter, retreat, and return. The object does not transfer meaning. It opens it.</p>
+        <p class="text-warm text-sm leading-loose" data-i18n="context.p4">In the kuari ecosystem, the object, the space, and the stay form a single architecture of pure experience. Not a collection — a life practice. The most valuable thing you can hold is not the aluminium. It is what happens inside you each time you return to it.</p>
       </div>
     </div>
   </section>
@@ -519,63 +570,75 @@
     <div class="space-y-0" id="faq-list"></div>
   </section>
 
-  <!-- ── LIVING ARCHIVE ──────────────────────────────────── -->
+  <!-- ── THE LOOP ─────────────────────────────────────────── -->
   <section class="py-24 md:py-44 px-6 md:px-16 border-t border-white/5">
-    <div class="max-w-4xl mx-auto">
-      <p class="font-mono text-steel text-xs tracking-widest mb-14 md:mb-20" data-i18n="retreat.badge">008 — THE LIVING ARCHIVE</p>
+    <div class="max-w-5xl mx-auto">
+      <p class="font-mono text-steel text-xs tracking-widest mb-10 md:mb-14" data-i18n="retreat.badge">008 — THE LOOP</p>
 
-      <!-- headline -->
-      <div class="grid md:grid-cols-2 gap-12 md:gap-24 items-end mb-16 md:mb-24">
-        <div>
-          <h2 class="font-display text-chalk font-light leading-none mb-4"
-              style="font-size:clamp(48px,9vw,108px); letter-spacing:-0.02em;"
-              data-i18n="retreat.title">Pure<br>Experience</h2>
-          <p class="font-display text-warm italic font-light" style="font-size:clamp(15px,2vw,20px);"
-             data-i18n="retreat.kana">純粋経験</p>
-        </div>
-        <div class="flex flex-col gap-5 pb-2">
-          <p class="text-warm text-sm leading-loose" data-i18n="retreat.p1">
-            Ownership of a singular object does not end at the wall. The Prouvé Brise-Soleil, on exhibition in Kaike, inhabits the same spatial logic it was built for — mediating light, framing stillness, opening a room to time.
-          </p>
-          <p class="text-warm text-sm leading-loose" data-i18n="retreat.p2">
-            kuari Kaike is the physical node of this ecosystem: a retreat designed around the presence of this object, where holders, collectors, and guests engage directly with the work in its lived environment. Not a gallery. A Life Log.
-          </p>
-        </div>
-      </div>
-
-      <!-- spiral diagram -->
-      <div class="border border-white/6 px-8 md:px-12 py-10 mb-14 overflow-x-auto">
-        <div class="font-mono text-xs tracking-widest min-w-max mx-auto" style="color:#6B7F8E;">
-          <div class="flex items-center gap-0 mb-5">
-            <span class="border border-white/15 px-4 py-2 text-chalk" data-i18n="retreat.node1">OBJECT</span>
-            <span class="px-3">──</span>
-            <span class="border border-white/15 px-4 py-2" data-i18n="retreat.node2">EXHIBITION</span>
-            <span class="px-3">──</span>
-            <span class="border border-white/15 px-4 py-2" data-i18n="retreat.node3">RETREAT</span>
-            <span class="px-3">──</span>
-            <span class="border border-white/15 px-4 py-2" data-i18n="retreat.node4">LIFE LOG</span>
-          </div>
-          <div class="flex items-center gap-0">
-            <span class="pl-6 pr-3 text-white/10">↑</span>
-            <span class="text-white/10" style="letter-spacing:0;">────────────────────────────────────────────────────</span>
-            <span class="px-3 text-white/10">↙</span>
-          </div>
-          <div class="mt-3 text-center" style="letter-spacing:0.3em; font-size:9px; color:#6B7F8E44;" data-i18n="retreat.spiral">SPIRAL GROWTH — kuari ecosystem</div>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <p class="text-warm text-xs leading-loose max-w-xs" style="letter-spacing:0.06em;" data-i18n="retreat.note">
-          Fractional and full ownership of this object includes access to the kuari residency programme at Kaike.
+      <div class="mb-14 md:mb-20">
+        <h2 class="font-display text-chalk font-light leading-tight mb-6"
+            style="font-size:clamp(28px,5vw,58px);"
+            data-i18n-html="retreat.title">Three nodes.<br>One unbroken experience.</h2>
+        <p class="text-warm text-sm leading-loose max-w-xl" data-i18n="retreat.intro">
+          Ownership does not conclude at acquisition. It opens a loop — an ongoing, embodied relationship between the object, the space where it lives, and the life built around it. Pure Experience is not a moment. It is an architecture.
         </p>
-        <a href="https://tk1128.github.io/kuari-hp/zen-retreat/"
-           target="_blank" rel="noopener"
-           class="font-mono text-steel2 text-xs tracking-widest hover:text-chalk transition-colors duration-300 whitespace-nowrap"
-           data-i18n="retreat.cta">
-          Synthesize your pure experience at kuari Kaike →
-        </a>
       </div>
+
+      <!-- 3 nodes -->
+      <div class="flex flex-col md:flex-row gap-0 mb-10">
+
+        <!-- Node 01: Prouvé -->
+        <div class="loop-node flex-1">
+          <p class="font-mono text-steel text-xs tracking-widest mb-8" data-i18n="retreat.n1.num">NODE 01 — THE ORIGIN</p>
+          <h3 class="font-display text-chalk font-light mb-1" style="font-size:clamp(22px,3vw,32px);">Brise-Soleil</h3>
+          <p class="font-mono text-steel2 text-xs tracking-widest mb-6" data-i18n="retreat.n1.sub">Jean Prouvé, c.1950s</p>
+          <p class="text-warm text-xs leading-loose flex-1 mb-8" data-i18n="retreat.n1.desc">
+            The object that started everything. Seventy years of equatorial light compressed into warm amber aluminium. The encounter with this piece is the first movement of the loop.
+          </p>
+          <div class="pt-5 border-t border-white/5">
+            <a href="https://prouve-brise-soleil.vercel.app/" class="loop-node-link" data-i18n="retreat.n1.link">prouve-brise-soleil.vercel.app ↗</a>
+          </div>
+        </div>
+
+        <div class="loop-arrow">→</div>
+
+        <!-- Node 02: kuari Kaike -->
+        <div class="loop-node flex-1">
+          <p class="font-mono text-steel text-xs tracking-widest mb-8" data-i18n="retreat.n2.num">NODE 02 — THE SPACE</p>
+          <h3 class="font-display text-chalk font-light mb-1" style="font-size:clamp(22px,3vw,32px);">kuari 皆生</h3>
+          <p class="font-mono text-steel2 text-xs tracking-widest mb-6" data-i18n="retreat.n2.sub">Kaike, Yonago, Tottori</p>
+          <p class="text-warm text-xs leading-loose flex-1 mb-8" data-i18n="retreat.n2.desc">
+            The retreat where the Prouvé Brise-Soleil is permanently installed. Stay inside the object's light. A Life Log begins here — where the body registers what the mind cannot yet name.
+          </p>
+          <div class="pt-5 border-t border-white/5">
+            <a href="https://tk1128.github.io/kuari-hp/zen-retreat/" target="_blank" rel="noopener" class="loop-node-link" data-i18n="retreat.n2.link">kuari Kaike — zen-retreat ↗</a>
+          </div>
+        </div>
+
+        <div class="loop-arrow">→</div>
+
+        <!-- Node 03: kuari 東本町 -->
+        <div class="loop-node flex-1">
+          <p class="font-mono text-steel text-xs tracking-widest mb-8" data-i18n="retreat.n3.num">NODE 03 — THE LIFE</p>
+          <h3 class="font-display text-chalk font-light mb-1" style="font-size:clamp(22px,3vw,32px);">kuari 東本町</h3>
+          <p class="font-mono text-steel2 text-xs tracking-widest mb-6" data-i18n="retreat.n3.sub">Matsue, Shimane</p>
+          <p class="text-warm text-xs leading-loose flex-1 mb-8" data-i18n="retreat.n3.desc">
+            The second node of the kuari network. A private stay that extends the frequency of pure experience into daily rhythm. What begins with the object deepens here — and returns to the object again.
+          </p>
+          <div class="pt-5 border-t border-white/5">
+            <a href="https://kuari-higashihonmachi.vercel.app/" target="_blank" rel="noopener" class="loop-node-link" data-i18n="retreat.n3.link">kuari-higashihonmachi.vercel.app ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- loop closing line -->
+      <div class="border border-white/5 py-6 px-8 text-center">
+        <p class="font-mono text-xs tracking-widest" style="color:rgba(107,127,142,.4); letter-spacing:0.3em;" data-i18n="retreat.loop">
+          ← PURE EXPERIENCE ·  純粋経験  · PURE EXPERIENCE ·  純粋経験  · PURE EXPERIENCE →
+        </p>
+      </div>
+
     </div>
   </section>
 
@@ -583,10 +646,9 @@
   <section id="inquire" class="py-24 md:py-36 px-6 md:px-16 text-center border-t border-white/5">
     <p class="font-mono text-steel text-xs tracking-widest mb-6 md:mb-8" data-i18n="acq.badge">006 — ACQUISITION</p>
     <h2 class="font-display text-chalk font-light leading-tight mb-4"
-        style="font-size:clamp(28px,6vw,70px);" data-i18n="acq.title">Available for Acquisition</h2>
+        style="font-size:clamp(28px,6vw,70px);" data-i18n="acq.title">Enter the Loop</h2>
     <p class="font-mono tracking-widest mb-8" style="font-size:11px;color:#8FA3B1;" data-i18n="acq.price">PRICE — ASK</p>
-    <p class="text-warm text-sm max-w-sm mx-auto mb-10 leading-loose whitespace-pre-line" data-i18n="acq.desc">Currently on exhibition in Kaike, Yonago, Tottori.
-Serious collectors only. Viewing by appointment.</p>
+    <p class="text-warm text-sm max-w-sm mx-auto mb-10 leading-loose" data-i18n="acq.desc">To acquire this object is to enter the kuari ecosystem of pure experience. On exhibition at kuari Kaike, Yonago, Tottori. Viewing by appointment.</p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="https://share.google/1a56acOkb0IT4ZllY" target="_blank" rel="noopener"
          class="btn" data-i18n="acq.cta1">Send Enquiry</a>
@@ -645,24 +707,35 @@ Serious collectors only. Viewing by appointment.</p>
       'chain.status':'Pending Issuance','chain.contract.label':'CONTRACT ADDRESS',
       'chain.token.label':'TOKEN STANDARD','chain.id.label':'TOKEN ID','chain.hash.label':'PROVENANCE HASH',
       'chain.footer':'The digital certificate travels with the physical object. Upon acquisition, ownership of the NFT is transferred alongside the artwork.',
-      'context.badge':'005 — CONTEXT','context.h1':'The Infinite Garden Logic',
-      'context.p1':'Prouvé believed buildings should be assembled, not constructed — each component a resolved object in its own right. The Brise-Soleil was not decoration. It was climate logic made physical.',
-      'context.p2':'That disassembly is precisely what saved this piece. Seventy years later, the same modularity that defined Prouvé\'s industrial philosophy allowed it to cross continents again.',
-      'context.h2':'Why It Matters Now',
-      'context.p3':'In a market saturated with edition prints and digital speculation, objects like this carry something irreducible: physical proof of time, process, and place. The corrugated aluminium has shifted from industrial silver to warm amber — a living patina no reproduction can approximate.',
-      'context.p4':'For the Web3-native collector, the provenance chain aligns naturally with blockchain logic. For the traditional collector, it is simply one of the most significant Prouvé objects to surface in Japan in recent memory.',
-      'retreat.badge':'008 — THE LIVING ARCHIVE',
-      'retreat.title':'Pure\nExperience',
-      'retreat.kana':'純粋経験',
-      'retreat.p1':'Ownership of a singular object does not end at the wall. The Prouvé Brise-Soleil, on exhibition in Kaike, inhabits the same spatial logic it was built for — mediating light, framing stillness, opening a room to time.',
-      'retreat.p2':'kuari Kaike is the physical node of this ecosystem: a retreat designed around the presence of this object, where holders, collectors, and guests engage directly with the work in its lived environment. Not a gallery. A Life Log.',
-      'retreat.node1':'OBJECT','retreat.node2':'EXHIBITION','retreat.node3':'RETREAT','retreat.node4':'LIFE LOG',
-      'retreat.spiral':'SPIRAL GROWTH — kuari ecosystem',
-      'retreat.note':'Fractional and full ownership of this object includes access to the kuari residency programme at Kaike.',
-      'retreat.cta':'Synthesize your pure experience at kuari Kaike →',
-      'acq.badge':'006 — ACQUISITION','acq.title':'Available for Acquisition',
+      'axiom.badge':'— THE AXIOM —',
+      'axiom.statement':'Pure Experience<br>is the only afterlife.',
+      'axiom.sub':'The most valuable thing is not the object. Not the documentation. Not the price. It is the irreducible moment of encounter — the sense of having been fully present, of having been here.',
+      'axiom.kana':'純粋経験',
+      'context.badge':'005 — THE PURE EXPERIENCE','context.h1':'Why Pure Experience is the Afterlife',
+      'context.p1':'Nishida Kitarō defined pure experience as direct, unmediated encounter — the moment before subject and object divide. Prouvé understood this without naming it: his structures were not designed to be looked at. They were designed to be lived inside.',
+      'context.p2':'The Brise-Soleil does not exist to be owned. It exists to be present. To cast its shadow on the floor each morning. To change the temperature of a room. To make the body aware of time without the use of a clock.',
+      'context.h2':'Involvement as the Highest Value',
+      'context.p3':'What we call ownership here is more precisely: participation. To acquire this object is to join an ongoing experience — a continuous loop of encounter, retreat, and return. The object does not transfer meaning. It opens it.',
+      'context.p4':'In the kuari ecosystem, the object, the space, and the stay form a single architecture of pure experience. Not a collection — a life practice. The most valuable thing you can hold is not the aluminium. It is what happens inside you each time you return to it.',
+      'retreat.badge':'008 — THE LOOP',
+      'retreat.title':'Three nodes.<br>One unbroken experience.',
+      'retreat.intro':'Ownership does not conclude at acquisition. It opens a loop — an ongoing, embodied relationship between the object, the space where it lives, and the life built around it. Pure Experience is not a moment. It is an architecture.',
+      'retreat.n1.num':'NODE 01 — THE ORIGIN',
+      'retreat.n1.sub':'Jean Prouvé, c.1950s',
+      'retreat.n1.desc':'The object that started everything. Seventy years of equatorial light compressed into warm amber aluminium. The encounter with this piece is the first movement of the loop.',
+      'retreat.n1.link':'prouve-brise-soleil.vercel.app ↗',
+      'retreat.n2.num':'NODE 02 — THE SPACE',
+      'retreat.n2.sub':'Kaike, Yonago, Tottori',
+      'retreat.n2.desc':'The retreat where the Prouvé Brise-Soleil is permanently installed. Stay inside the object\'s light. A Life Log begins here — where the body registers what the mind cannot yet name.',
+      'retreat.n2.link':'kuari Kaike — zen-retreat ↗',
+      'retreat.n3.num':'NODE 03 — THE LIFE',
+      'retreat.n3.sub':'Matsue, Shimane',
+      'retreat.n3.desc':'The second node of the kuari network. A private stay that extends the frequency of pure experience into daily rhythm. What begins with the object deepens here — and returns to the object again.',
+      'retreat.n3.link':'kuari-higashihonmachi.vercel.app ↗',
+      'retreat.loop':'← PURE EXPERIENCE ·  純粋経験  · PURE EXPERIENCE ·  純粋経験  · PURE EXPERIENCE →',
+      'acq.badge':'006 — ENTER THE LOOP','acq.title':'Enter the Loop',
       'acq.price':'PRICE — ASK',
-      'acq.desc':'On exhibition at kuari Kaike, Yonago, Tottori.\nSerious collectors only. Viewing by appointment.',
+      'acq.desc':'To acquire this object is to enter the kuari ecosystem of pure experience. On exhibition at kuari Kaike, Yonago, Tottori. Viewing by appointment.',
       'acq.cta1':'Send Enquiry','acq.instagram':'@re_ie_ on Instagram','acq.cta2':'Provenance: @briceberardantiques',
       'footer.sub':'Brise-Soleil — c.1950s — 1 of 1',
       'footer.presented':'On exhibition — kuari Kaike, Yonago, Tottori',
@@ -701,24 +774,35 @@ Serious collectors only. Viewing by appointment.</p>
       'chain.status':'発行準備中','chain.contract.label':'コントラクトアドレス',
       'chain.token.label':'トークン規格','chain.id.label':'トークンID','chain.hash.label':'プロヴナンスハッシュ',
       'chain.footer':'デジタル証明書は物理的な作品とともに移転します。取得の際、NFTの所有権も作品と同時に譲渡されます。',
-      'context.badge':'005 — コンテクスト','context.h1':'インフィニット・ガーデンの論理',
-      'context.p1':'プルーヴェは建築は組み立てるものだと考えていました。各コンポーネントはそれ自体で完結したオブジェクト。ブリーズ・ソレイユは装飾ではありません。気候の論理を物理的に体現したものです。',
-      'context.p2':'解体可能な設計こそが、この作品を救いました。70年後、同じモジュール性が再び大陸を越えることを可能にしたのです。',
-      'context.h2':'なぜ今、重要なのか',
-      'context.p3':'エディションプリントとデジタル投機が溢れる市場において、このオブジェクトは不可逆的なものを持っています。時間・プロセス・場所の物理的な証明。波形アルミニウムは工業的な銀からウォームアンバーへと変容した——70年の赤道光が刻んだ、複製不可能なパティーナ。',
-      'context.p4':'Web3ネイティブなコレクターにとって、プロヴナンスチェーンはブロックチェーンの論理と自然に合致します。従来のコレクターにとっては、近年日本に現れた最も重要なプルーヴェ作品のひとつです。',
-      'retreat.badge':'008 — リビング・アーカイブ',
-      'retreat.title':'純粋\n経験',
-      'retreat.kana':'Pure Experience',
-      'retreat.p1':'作品の所有は、壁の前で終わらない。皆生に展示されたプルーヴェのブリーズ・ソレイユは、設計された論理の中に生きている——光を調律し、静けさを縁取り、空間を時間へと開く。',
-      'retreat.p2':'kuari 皆生は、このエコシステムの物理的なノードです。この作品の存在を軸に設計されたリトリートで、オーナー、コレクター、ゲストが作品を日常の文脈で直接体験します。ギャラリーではなく、ライフログ。',
-      'retreat.node1':'作品','retreat.node2':'展示','retreat.node3':'リトリート','retreat.node4':'ライフログ',
-      'retreat.spiral':'スパイラル成長 — kuari エコシステム',
-      'retreat.note':'この作品のフラクショナル・完全オーナーは、皆生 kuari レジデンシー・プログラムへのアクセスが含まれます。',
-      'retreat.cta':'kuari 皆生で純粋経験を統合する →',
-      'acq.badge':'006 — 取得','acq.title':'ご購入のご相談',
+      'axiom.badge':'— 公理 —',
+      'axiom.statement':'純粋経験こそが<br>唯一のアフターライフ。',
+      'axiom.sub':'最も価値のあるものは作品ではない。記録でも、価格でもない。それは出会いの、削ぎ落とされた瞬間——完全にそこにいたという実感、ここにいたという事実。',
+      'axiom.kana':'Pure Experience',
+      'context.badge':'005 — 純粋経験','context.h1':'なぜ純粋経験がアフターライフなのか',
+      'context.p1':'西田幾多郎は純粋経験を「主客未分の直接的な経験」と定義した。プルーヴェはそれを名付けずに理解していた。彼の構造物は見られるために設計されていない。その中に生きるために設計されている。',
+      'context.p2':'ブリーズ・ソレイユは所有されるために存在するのではない。在るために存在する。毎朝床に影を落とすために。部屋の温度を変えるために。時計を使わずに、身体に時間を教えるために。',
+      'context.h2':'関与こそが最高の価値',
+      'context.p3':'ここでいう所有とは、より正確には「参加」である。この作品を取得することは、進行中の体験へ加わることだ——出会い、リトリート、帰還の連続するループへ。作品は意味を移転しない。意味を開くのだ。',
+      'context.p4':'kuari エコシステムにおいて、作品・空間・滞在は純粋経験の単一の建築を形成する。コレクションではなく、生きる実践。あなたが持ち得る最も価値のあるものはアルミニウムではない。それに戻るたびに、あなたの中で起きることだ。',
+      'retreat.badge':'008 — ザ・ループ',
+      'retreat.title':'三つのノード。<br>途切れない体験。',
+      'retreat.intro':'所有は取得で完結しない。ループが開く——作品、それが生きる空間、その周りに築かれた生との、継続する身体的な関係。純粋経験は瞬間ではない。それはアーキテクチャだ。',
+      'retreat.n1.num':'ノード 01 — 起源',
+      'retreat.n1.sub':'ジャン・プルーヴェ、1950年代',
+      'retreat.n1.desc':'すべての始まりとなった作品。70年分の赤道光がウォームアンバーのアルミニウムに圧縮されている。この作品との出会いがループの第一楽章だ。',
+      'retreat.n1.link':'prouve-brise-soleil.vercel.app ↗',
+      'retreat.n2.num':'ノード 02 — 空間',
+      'retreat.n2.sub':'鳥取県米子市皆生',
+      'retreat.n2.desc':'プルーヴェのブリーズ・ソレイユが常設展示されているリトリート。作品の光の中に滞在する。身体が言語化できないものを登録する場所——ライフログはここから始まる。',
+      'retreat.n2.link':'kuari 皆生 — zen-retreat ↗',
+      'retreat.n3.num':'ノード 03 — 生',
+      'retreat.n3.sub':'島根県松江市東本町',
+      'retreat.n3.desc':'kuari ネットワークの第二ノード。純粋経験の周波数を日常のリズムへと延長するプライベートステイ。作品から始まるものがここで深まり——また作品へと戻っていく。',
+      'retreat.n3.link':'kuari-higashihonmachi.vercel.app ↗',
+      'retreat.loop':'← 純粋経験 · Pure Experience · 純粋経験 · Pure Experience · 純粋経験 →',
+      'acq.badge':'006 — ループへの参加','acq.title':'ループに入る',
       'acq.price':'価格 — ASK',
-      'acq.desc':'kuari 皆生（鳥取県米子市）にて展示中。\nシリアスなコレクターの方限定。内覧は予約制。',
+      'acq.desc':'この作品を取得することは、kuari の純粋経験エコシステムに参加することだ。kuari 皆生（鳥取県米子市）にて展示中。内覧は予約制。',
       'acq.cta1':'お問い合わせフォーム','acq.instagram':'Instagram @re_ie_','acq.cta2':'プロヴナンス：@briceberardantiques',
       'footer.sub':'ブリーズ・ソレイユ — 1950年代 — 1点限り',
       'footer.presented':'kuari 皆生 にて展示中',
@@ -757,24 +841,35 @@ Serious collectors only. Viewing by appointment.</p>
       'chain.status':'Émission en cours','chain.contract.label':'ADRESSE DU CONTRAT',
       'chain.token.label':'STANDARD TOKEN','chain.id.label':'ID TOKEN','chain.hash.label':'HASH PROVENANCE',
       'chain.footer':'Le certificat numérique accompagne l\'objet physique. Lors de l\'acquisition, la propriété du NFT est transférée avec l\'œuvre.',
-      'context.badge':'005 — CONTEXTE','context.h1':'La Logique du Jardin Infini',
-      'context.p1':'Prouvé croyait que les bâtiments devaient être assemblés, pas construits — chaque composant étant un objet résolu en lui-même. Le Brise-Soleil n\'était pas une décoration. C\'était la logique climatique rendue physique.',
-      'context.p2':'Ce démontage est précisément ce qui a sauvé cette pièce. Soixante-dix ans plus tard, la même modularité a permis à l\'œuvre de traverser à nouveau les continents.',
-      'context.h2':'Pourquoi Cela Compte Aujourd\'hui',
-      'context.p3':'Dans un marché saturé d\'éditions imprimées et de spéculation numérique, des objets comme celui-ci portent quelque chose d\'irréductible : une preuve physique du temps, du processus et du lieu.',
-      'context.p4':'Pour le collectionneur natif Web3, la chaîne de provenance s\'aligne naturellement avec la logique blockchain. Pour le collectionneur traditionnel, c\'est l\'un des objets Prouvé les plus significatifs à avoir émergé au Japon.',
-      'retreat.badge':'008 — L\'ARCHIVE VIVANTE',
-      'retreat.title':'Expérience\nPure',
-      'retreat.kana':'純粋経験',
-      'retreat.p1':'La possession d\'un objet singulier ne s\'arrête pas au mur. Le Brise-Soleil de Prouvé, en exposition à Kaike, habite la même logique spatiale pour laquelle il a été conçu — médiateur de lumière, cadre du silence, ouverture d\'une pièce au temps.',
-      'retreat.p2':'kuari Kaike est le nœud physique de cet écosystème : une retraite conçue autour de la présence de cette œuvre, où détenteurs, collectionneurs et hôtes s\'engagent directement avec le travail dans son environnement vécu. Pas une galerie. Un carnet de vie.',
-      'retreat.node1':'ŒUVRE','retreat.node2':'EXPOSITION','retreat.node3':'RETRAITE','retreat.node4':'CARNET DE VIE',
-      'retreat.spiral':'CROISSANCE SPIRALE — écosystème kuari',
-      'retreat.note':'La propriété fractionnelle et totale de cette œuvre inclut l\'accès au programme de résidence kuari à Kaike.',
-      'retreat.cta':'Synthétisez votre expérience pure à kuari Kaike →',
-      'acq.badge':'006 — ACQUISITION','acq.title':'Disponible à l\'Acquisition',
+      'axiom.badge':'— L\'AXIOME —',
+      'axiom.statement':'L\'Expérience Pure<br>est le seul afterlife.',
+      'axiom.sub':'La chose la plus précieuse n\'est pas l\'objet. Ni la documentation. Ni le prix. C\'est le moment irréductible de la rencontre — le sentiment d\'avoir été pleinement présent, d\'avoir été là.',
+      'axiom.kana':'純粋経験',
+      'context.badge':'005 — L\'EXPÉRIENCE PURE','context.h1':'Pourquoi l\'Expérience Pure est l\'Afterlife',
+      'context.p1':'Nishida Kitarō définissait l\'expérience pure comme une rencontre directe et non médiatisée — le moment avant la division sujet-objet. Prouvé le comprenait sans le nommer : ses structures n\'étaient pas conçues pour être regardées. Elles étaient conçues pour être vécues de l\'intérieur.',
+      'context.p2':'Le Brise-Soleil n\'existe pas pour être possédé. Il existe pour être présent. Pour projeter son ombre sur le sol chaque matin. Pour changer la température d\'une pièce. Pour faire prendre conscience au corps du temps sans recourir à une horloge.',
+      'context.h2':'L\'Engagement comme Valeur Suprême',
+      'context.p3':'Ce que nous appelons propriété ici est plus précisément : participation. Acquérir cet objet, c\'est rejoindre une expérience en cours — une boucle continue de rencontre, de retraite et de retour. L\'objet ne transfère pas le sens. Il l\'ouvre.',
+      'context.p4':'Dans l\'écosystème kuari, l\'objet, l\'espace et le séjour forment une architecture unique d\'expérience pure. Non pas une collection — une pratique de vie. La chose la plus précieuse que vous pouvez tenir n\'est pas l\'aluminium. C\'est ce qui se passe en vous chaque fois que vous y revenez.',
+      'retreat.badge':'008 — LA BOUCLE',
+      'retreat.title':'Trois nœuds.<br>Une expérience continue.',
+      'retreat.intro':'La propriété ne se conclut pas à l\'acquisition. Elle ouvre une boucle — une relation incarnée et continue entre l\'objet, l\'espace où il vit, et la vie construite autour de lui. L\'Expérience Pure n\'est pas un moment. C\'est une architecture.',
+      'retreat.n1.num':'NŒUD 01 — L\'ORIGINE',
+      'retreat.n1.sub':'Jean Prouvé, c.1950s',
+      'retreat.n1.desc':'L\'objet qui a tout commencé. Soixante-dix ans de lumière équatoriale compressés dans un aluminium ambre chaud. La rencontre avec cette pièce est le premier mouvement de la boucle.',
+      'retreat.n1.link':'prouve-brise-soleil.vercel.app ↗',
+      'retreat.n2.num':'NŒUD 02 — L\'ESPACE',
+      'retreat.n2.sub':'Kaike, Yonago, Tottori',
+      'retreat.n2.desc':'La retraite où le Brise-Soleil de Prouvé est installé en permanence. Séjourner dans la lumière de l\'objet. Un carnet de vie commence ici — là où le corps enregistre ce que l\'esprit ne peut pas encore nommer.',
+      'retreat.n2.link':'kuari Kaike — zen-retreat ↗',
+      'retreat.n3.num':'NŒUD 03 — LA VIE',
+      'retreat.n3.sub':'Matsue, Shimane',
+      'retreat.n3.desc':'Le deuxième nœud du réseau kuari. Un séjour privé qui prolonge la fréquence de l\'expérience pure dans le rythme quotidien. Ce qui commence avec l\'objet s\'approfondit ici — et revient à l\'objet.',
+      'retreat.n3.link':'kuari-higashihonmachi.vercel.app ↗',
+      'retreat.loop':'← EXPÉRIENCE PURE · 純粋経験 · EXPÉRIENCE PURE · 純粋経験 · EXPÉRIENCE PURE →',
+      'acq.badge':'006 — ENTRER DANS LA BOUCLE','acq.title':'Entrer dans la Boucle',
       'acq.price':'PRIX — ASK',
-      'acq.desc':'En exposition à kuari Kaike, Yonago, Tottori.\nCollectionneurs sérieux uniquement. Visite sur rendez-vous.',
+      'acq.desc':'Acquérir cet objet, c\'est entrer dans l\'écosystème kuari d\'expérience pure. En exposition à kuari Kaike, Yonago, Tottori. Visite sur rendez-vous.',
       'acq.cta1':'Envoyer une demande','acq.instagram':'@re_ie_ sur Instagram','acq.cta2':'Provenance : @briceberardantiques',
       'footer.sub':'Brise-Soleil — c.1950s — Pièce unique',
       'footer.presented':'En exposition — kuari Kaike, Yonago, Tottori',

@@ -692,16 +692,50 @@
   </section>
 
   <!-- ── FOOTER ────────────────────────────────────────── -->
-  <footer class="border-t border-white/5 py-10 md:py-14 px-6 md:px-16">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-      <div>
-        <p class="font-display text-chalk text-xl font-light tracking-widest mb-1" data-i18n="nav.brand">Jean Prouvé</p>
-        <p class="font-mono text-steel text-xs tracking-widest" data-i18n="footer.sub">Brise-Soleil — c.1950s — 1 of 1</p>
+  <footer class="border-t border-white/5 py-12 md:py-16 px-6 md:px-16">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 mb-8 border-b border-white/5">
+
+        <!-- Col 1: Object -->
+        <div>
+          <p class="font-display text-chalk text-xl font-light tracking-widest mb-2" data-i18n="nav.brand">Jean Prouvé</p>
+          <p class="font-mono text-steel text-xs tracking-widest mb-1" data-i18n="footer.sub">Brise-Soleil — c.1950s — 1 of 1</p>
+          <p class="font-mono text-steel text-xs tracking-widest" data-i18n="footer.origin">Cameroon → Kaike, Japan</p>
+        </div>
+
+        <!-- Col 2: Exhibition + Inquiry -->
+        <div>
+          <p class="font-mono text-steel text-xs tracking-widest mb-3" data-i18n="footer.venue.label">CURRENTLY ON EXHIBITION</p>
+          <p class="font-mono text-chalk/70 text-xs tracking-widest mb-1" data-i18n="footer.presented">kuari Kaike — Yonago, Tottori</p>
+          <p class="font-mono text-steel text-xs tracking-widest mb-6" data-i18n="footer.viewby">Viewing by appointment</p>
+          <a href="https://share.google/1a56acOkb0IT4ZllY" target="_blank" rel="noopener"
+             class="inline-block font-mono text-xs tracking-widest border border-white/10 px-4 py-2 text-chalk/60 hover:border-white/30 hover:text-chalk/90 transition-colors"
+             data-i18n="footer.inquire">Enquire →</a>
+        </div>
+
+        <!-- Col 3: Network -->
+        <div>
+          <p class="font-mono text-steel text-xs tracking-widest mb-3">kuari NETWORK</p>
+          <div class="space-y-3">
+            <a href="https://tk1128.github.io/kuari-hp/zen-retreat/" target="_blank" rel="noopener"
+               class="flex justify-between font-mono text-chalk/40 text-xs tracking-widest hover:text-chalk/70 transition-colors">
+              <span>kuari 皆生</span><span>↗</span>
+            </a>
+            <a href="https://kuari-higashihonmachi.vercel.app/" target="_blank" rel="noopener"
+               class="flex justify-between font-mono text-chalk/40 text-xs tracking-widest hover:text-chalk/70 transition-colors">
+              <span>kuari 東本町</span><span>↗</span>
+            </a>
+            <a href="https://www.instagram.com/re_ie_/" target="_blank" rel="noopener"
+               class="flex justify-between font-mono text-chalk/40 text-xs tracking-widest hover:text-chalk/70 transition-colors">
+              <span>Instagram @re_ie_</span><span>↗</span>
+            </a>
+          </div>
+        </div>
+
       </div>
-      <div class="font-mono text-steel text-xs tracking-widest space-y-1 text-left md:text-right">
-        <p data-i18n="footer.presented">Presented by found Ltd., Okayama</p>
-        <p data-i18n="footer.handles">@foundltd · @briceberardantiques</p>
-        <p class="mt-2 opacity-30" data-i18n="footer.copy">© 2026 found Ltd. All rights reserved.</p>
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+        <p class="font-mono text-steel text-xs tracking-widest" data-i18n="footer.handles">@foundltd · @briceberardantiques</p>
+        <p class="font-mono text-steel/40 text-xs tracking-widest" data-i18n="footer.copy">© 2026 found Ltd. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -756,8 +790,8 @@
       'context.p3':'Acquiring this piece is an act of participation — joining an ongoing loop of encounter, retreat, and return. The object does not give you meaning. It opens you to it.',
       'context.p4':'In the kuari ecosystem, the object, the space, and the stay form one continuous experience. Not a collection. A way of living.',
       'retreat.badge':'008 — THE LOOP',
-      'retreat.title':'Three spaces.<br>One experience.',
-      'retreat.intro':'Acquiring this object opens a loop — an ongoing relationship between the piece, the space it lives in, and a life built around it.',
+      'retreat.title':'Encounter the work.<br>Stay in its space.',
+      'retreat.intro':'Prouvé\'s Brise-Soleil is on permanent exhibition at kuari Kaike. To own this piece is to have a reason to return — to the light, to the space, to the experience.',
       'retreat.n1.num':'NODE 01 — THE OBJECT',
       'retreat.n1.sub':'Jean Prouvé, c.1950s',
       'retreat.n1.desc':'Seventy years of equatorial light compressed into warm amber aluminium. The starting point of the loop.',
@@ -776,7 +810,11 @@
       'acq.desc':'On exhibition at kuari Kaike, Yonago, Tottori.\nViewing by appointment.',
       'acq.cta1':'Send Enquiry','acq.instagram':'@re_ie_ on Instagram','acq.cta2':'Provenance: @briceberardantiques',
       'footer.sub':'Brise-Soleil — c.1950s — 1 of 1',
-      'footer.presented':'On exhibition — kuari Kaike, Yonago, Tottori',
+      'footer.origin':'Cameroon → Kaike, Japan',
+      'footer.venue.label':'CURRENTLY ON EXHIBITION',
+      'footer.presented':'kuari Kaike — Yonago, Tottori',
+      'footer.viewby':'Viewing by appointment',
+      'footer.inquire':'Enquire →',
       'footer.handles':'@foundltd · @briceberardantiques',
       'footer.copy':'© 2026 found Ltd. All rights reserved.',
       'gallery.scroll':'SCROLL',
@@ -827,8 +865,8 @@
       'context.p3':'この作品を手に入れることは「参加」することだ。出会い・リトリート・帰還の繰り返すループへ。作品は意味を与えない。意味への扉を開く。',
       'context.p4':'kuari エコシステムでは、作品・空間・滞在が一つの体験を形成する。コレクションではなく、生き方。',
       'retreat.badge':'008 — ザ・ループ',
-      'retreat.title':'3つの場所。<br>1つの体験。',
-      'retreat.intro':'この作品を手に入れることでループが開く——作品、それが生きる空間、その周りに築かれた生との、継続する関係。',
+      'retreat.title':'作品に出会い、<br>その空間に泊まる。',
+      'retreat.intro':'プルーヴェのブリーズ・ソレイユはkuari皆生に常設展示されています。この作品を所有するということは、戻る理由を持つということ——光へ、空間へ、経験へ。',
       'retreat.n1.num':'ノード 01 — 作品',
       'retreat.n1.sub':'ジャン・プルーヴェ、1950年代',
       'retreat.n1.desc':'70年の赤道光がアルミニウムに刻まれた、ループの出発点。',
@@ -847,7 +885,11 @@
       'acq.desc':'kuari 皆生（鳥取県米子市）にて展示中。\n内覧は予約制。',
       'acq.cta1':'問い合わせフォーム','acq.instagram':'Instagram @re_ie_','acq.cta2':'来歴：@briceberardantiques',
       'footer.sub':'ブリーズ・ソレイユ — 1950年代 — 1点',
-      'footer.presented':'kuari 皆生 にて展示中',
+      'footer.origin':'カメルーン → 皆生、米子',
+      'footer.venue.label':'現在の展示場所',
+      'footer.presented':'kuari 皆生 — 鳥取県米子市',
+      'footer.viewby':'内覧：完全予約制',
+      'footer.inquire':'お問い合わせ →',
       'footer.handles':'@foundltd · @briceberardantiques',
       'footer.copy':'© 2026 found Ltd. All rights reserved.',
       'gallery.scroll':'スクロール',
@@ -898,8 +940,8 @@
       'context.p3':'Acquérir cet objet, c\'est rejoindre une expérience en cours. L\'objet n\'apporte pas le sens — il l\'ouvre.',
       'context.p4':'Dans l\'écosystème kuari, l\'objet, l\'espace et le séjour forment une architecture d\'expérience pure. Non pas une collection — une pratique de vie.',
       'retreat.badge':'008 — LA BOUCLE',
-      'retreat.title':'Trois nœuds.<br>Une expérience continue.',
-      'retreat.intro':'La propriété ne se conclut pas à l\'acquisition. Elle ouvre une boucle — une relation vivante entre l\'objet, l\'espace où il vit, et la vie construite autour de lui.',
+      'retreat.title':'Rencontrer l\'œuvre.<br>Séjourner dans son espace.',
+      'retreat.intro':'Le Brise-Soleil de Prouvé est en exposition permanente à kuari Kaike. Posséder cette œuvre, c\'est avoir une raison de revenir — à la lumière, à l\'espace, à l\'expérience.',
       'retreat.n1.num':'NŒUD 01 — L\'ORIGINE',
       'retreat.n1.sub':'Jean Prouvé, c.1950s',
       'retreat.n1.desc':'L\'objet. Soixante-dix ans de lumière équatoriale dans un aluminium ambre chaud. Le premier mouvement de la boucle.',
@@ -918,7 +960,11 @@
       'acq.desc':'En exposition à kuari Kaike, Yonago, Tottori. Visite sur rendez-vous pour collectionneurs sérieux.',
       'acq.cta1':'Envoyer une demande','acq.instagram':'@re_ie_ sur Instagram','acq.cta2':'Provenance : @briceberardantiques',
       'footer.sub':'Brise-Soleil — c.1950s — Pièce unique',
-      'footer.presented':'En exposition — kuari Kaike, Yonago, Tottori',
+      'footer.origin':'Cameroun → Kaike, Japon',
+      'footer.venue.label':'EXPOSITION EN COURS',
+      'footer.presented':'kuari Kaike — Yonago, Tottori',
+      'footer.viewby':'Visite sur rendez-vous',
+      'footer.inquire':'Nous contacter →',
       'footer.handles':'@foundltd · @briceberardantiques',
       'footer.copy':'© 2026 found Ltd. Tous droits réservés.',
       'gallery.scroll':'DÉFILER',

@@ -360,6 +360,26 @@
 
     .rule { width:40px; height:1px; background:#6B7F8E; }
 
+    /* ── Facility nav ── */
+    .facility-pill {
+      display:inline-flex; flex-direction:column; gap:2px;
+      border:1px solid rgba(251,251,250,.15);
+      padding:12px 20px; text-decoration:none;
+      transition:background .3s, border-color .3s;
+      -webkit-tap-highlight-color:transparent;
+      min-width:160px;
+    }
+    .facility-pill:hover { background:rgba(251,251,250,.06); border-color:#8FA3B1; }
+    .facility-pill .fp-label {
+      font-family:'JetBrains Mono',monospace;
+      font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:#6B7F8E;
+    }
+    .facility-pill .fp-name {
+      font-family:'Cormorant Garamond',Georgia,serif;
+      font-size:clamp(14px,2vw,16px); color:#FBFBFA; font-weight:300;
+      letter-spacing:.05em;
+    }
+
     /* ── Hamburger (mobile nav) ── */
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; }
     .hamburger span { display:block; width:22px; height:1px; background:#FBFBFA; transition:.3s; }
@@ -413,7 +433,7 @@
         <p class="font-display text-warm italic font-light" style="font-size:clamp(16px,2.5vw,22px);"
            data-i18n="hero.subtitle">Sun Shutter System</p>
       </div>
-      <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-sm md:max-w-xl">
+      <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-sm md:max-w-xl mb-8">
         <div>
           <p class="font-mono text-steel text-xs tracking-widest mb-1" data-i18n="hero.artist.label">ARTIST</p>
           <p class="font-display text-chalk font-light" style="font-size:clamp(14px,2vw,18px);" data-i18n="hero.artist.value">Jean Prouvé</p>
@@ -426,6 +446,18 @@
           <p class="font-mono text-steel text-xs tracking-widest mb-1" data-i18n="hero.origin.label">ORIGIN</p>
           <p class="font-display text-chalk font-light" style="font-size:clamp(14px,2vw,18px);" data-i18n="hero.origin.value">Cameroon</p>
         </div>
+      </div>
+
+      <!-- Facility navigation -->
+      <div class="flex flex-wrap gap-3">
+        <a href="https://tk1128.github.io/kuari-hp/zen-retreat/" target="_blank" rel="noopener" class="facility-pill">
+          <span class="fp-label" data-i18n="hero.fac1.label">Exhibition & Stay</span>
+          <span class="fp-name">kuari 皆生 ↗</span>
+        </a>
+        <a href="https://kuari-higashihonmachi.vercel.app/" target="_blank" rel="noopener" class="facility-pill">
+          <span class="fp-label" data-i18n="hero.fac2.label">Private Stay</span>
+          <span class="fp-name">kuari 東本町 ↗</span>
+        </a>
       </div>
     </div>
 
@@ -514,35 +546,35 @@
 
   <!-- ── DIGITAL PROVENANCE ───────────────────────────── -->
   <section class="py-10 px-6 md:px-16 max-w-4xl mx-auto">
-    <p class="font-mono text-steel text-xs tracking-widest mb-8" data-i18n="chain.badge">004 — DIGITAL PROVENANCE</p>
+    <p class="font-mono text-steel text-xs tracking-widest mb-8" data-i18n="chain.badge">004 — OWNERSHIP CERTIFICATE</p>
     <div class="chain-block">
       <div class="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
         <div class="flex-1">
-          <h3 class="font-display text-chalk text-2xl font-light mb-3" data-i18n="chain.title">On-Chain Certificate</h3>
-          <p class="text-warm text-sm leading-loose" data-i18n="chain.desc">A digital twin of this physical object is being issued as an ERC-721 token on the Ethereum mainnet — encoding provenance, authenticity, and ownership history into an immutable public ledger.</p>
+          <h3 class="font-display text-chalk text-2xl font-light mb-3" data-i18n="chain.title">Digital Ownership Certificate</h3>
+          <p class="text-warm text-sm leading-loose" data-i18n="chain.desc">A tamper-proof digital certificate is issued with this object — recording its provenance, authenticity, and ownership history. The certificate transfers to the new owner on acquisition.</p>
         </div>
-        <span class="chain-badge self-start" data-i18n="chain.status">Pending Issuance</span>
+        <span class="chain-badge self-start" data-i18n="chain.status">Pending</span>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.contract.label">CONTRACT ADDRESS</p>
-          <p class="chain-address">0x — — — — — — — — — — — —<br><span class="text-steel opacity-60">[ To be assigned ]</span></p>
+          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.contract.label">CERTIFICATE TYPE</p>
+          <p class="chain-address" data-i18n="chain.contract.val">Digital Ownership Record<br><span class="text-steel opacity-60">Tamper-proof / Transferable</span></p>
         </div>
         <div>
-          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.token.label">TOKEN STANDARD</p>
-          <p class="chain-address">ERC-721 / Ethereum Mainnet<br><span class="text-steel opacity-60">Metadata: IPFS</span></p>
+          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.token.label">EDITION</p>
+          <p class="chain-address" data-i18n="chain.token.val">1 of 1 — Unique<br><span class="text-steel opacity-60">No reproductions</span></p>
         </div>
         <div>
-          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.id.label">TOKEN ID</p>
-          <p class="chain-address">001 / 1<br><span class="text-steel opacity-60">[ 1 of 1 ]</span></p>
+          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.id.label">PROVENANCE</p>
+          <p class="chain-address" data-i18n="chain.id.val">Documented / Verified<br><span class="text-steel opacity-60">Cameroon → Japan</span></p>
         </div>
         <div>
-          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.hash.label">PROVENANCE HASH</p>
-          <p class="chain-address">SHA-256: pending<br><span class="text-steel opacity-60">[ Physical + digital ]</span></p>
+          <p class="font-mono text-steel text-xs tracking-widest mb-2" data-i18n="chain.hash.label">STATUS</p>
+          <p class="chain-address" data-i18n="chain.hash.val">Certificate pending<br><span class="text-steel opacity-60">Issued on acquisition</span></p>
         </div>
       </div>
       <div class="mt-8 pt-6 border-t border-white/5">
-        <p class="text-warm text-xs leading-loose" data-i18n="chain.footer">The digital certificate travels with the physical object. Upon acquisition, ownership of the NFT is transferred alongside the artwork.</p>
+        <p class="text-warm text-xs leading-loose" data-i18n="chain.footer">The certificate travels with the piece. Ownership is fully transferable.</p>
       </div>
     </div>
   </section>
@@ -595,8 +627,8 @@
           <p class="text-warm text-xs leading-loose flex-1 mb-8" data-i18n="retreat.n1.desc">
             The object that started everything. Seventy years of equatorial light compressed into warm amber aluminium. The encounter with this piece is the first movement of the loop.
           </p>
-          <div class="pt-5 border-t border-white/5">
-            <a href="https://prouve-brise-soleil.vercel.app/" class="loop-node-link" data-i18n="retreat.n1.link">prouve-brise-soleil.vercel.app ↗</a>
+          <div class="pt-5 border-t border-white/5 mt-auto">
+            <a href="https://prouve-brise-soleil.vercel.app/" class="btn w-full" style="min-height:44px;font-size:10px;" data-i18n="retreat.n1.link">この作品を見る</a>
           </div>
         </div>
 
@@ -604,14 +636,15 @@
 
         <!-- Node 02: kuari Kaike -->
         <div class="loop-node flex-1">
-          <p class="font-mono text-steel text-xs tracking-widest mb-8" data-i18n="retreat.n2.num">NODE 02 — THE SPACE</p>
+          <p class="font-mono text-steel text-xs tracking-widest mb-8" data-i18n="retreat.n2.num">NODE 02 — EXHIBITION & STAY</p>
           <h3 class="font-display text-chalk font-light mb-1" style="font-size:clamp(22px,3vw,32px);">kuari 皆生</h3>
-          <p class="font-mono text-steel2 text-xs tracking-widest mb-6" data-i18n="retreat.n2.sub">Kaike, Yonago, Tottori</p>
+          <p class="font-mono text-steel2 text-xs tracking-widest mb-6" data-i18n="retreat.n2.sub">鳥取県米子市皆生</p>
           <p class="text-warm text-xs leading-loose flex-1 mb-8" data-i18n="retreat.n2.desc">
-            The retreat where the Prouvé Brise-Soleil is permanently installed. Stay inside the object's light. A Life Log begins here — where the body registers what the mind cannot yet name.
+            プルーヴェの作品が常設展示されているリトリート。作品の光の中に滞在する。
           </p>
-          <div class="pt-5 border-t border-white/5">
-            <a href="https://tk1128.github.io/kuari-hp/zen-retreat/" target="_blank" rel="noopener" class="loop-node-link" data-i18n="retreat.n2.link">kuari Kaike — zen-retreat ↗</a>
+          <div class="pt-5 border-t border-white/5 mt-auto">
+            <a href="https://tk1128.github.io/kuari-hp/zen-retreat/" target="_blank" rel="noopener"
+               class="btn w-full" style="min-height:44px;font-size:10px;" data-i18n="retreat.n2.link">kuari 皆生に滞在する</a>
           </div>
         </div>
 
@@ -619,14 +652,15 @@
 
         <!-- Node 03: kuari 東本町 -->
         <div class="loop-node flex-1">
-          <p class="font-mono text-steel text-xs tracking-widest mb-8" data-i18n="retreat.n3.num">NODE 03 — THE LIFE</p>
+          <p class="font-mono text-steel text-xs tracking-widest mb-8" data-i18n="retreat.n3.num">NODE 03 — PRIVATE STAY</p>
           <h3 class="font-display text-chalk font-light mb-1" style="font-size:clamp(22px,3vw,32px);">kuari 東本町</h3>
-          <p class="font-mono text-steel2 text-xs tracking-widest mb-6" data-i18n="retreat.n3.sub">Matsue, Shimane</p>
+          <p class="font-mono text-steel2 text-xs tracking-widest mb-6" data-i18n="retreat.n3.sub">島根県松江市</p>
           <p class="text-warm text-xs leading-loose flex-1 mb-8" data-i18n="retreat.n3.desc">
-            The second node of the kuari network. A private stay that extends the frequency of pure experience into daily rhythm. What begins with the object deepens here — and returns to the object again.
+            kuari ネットワーク第二拠点。純粋経験を日常のリズムへと延長するプライベートステイ。
           </p>
-          <div class="pt-5 border-t border-white/5">
-            <a href="https://kuari-higashihonmachi.vercel.app/" target="_blank" rel="noopener" class="loop-node-link" data-i18n="retreat.n3.link">kuari-higashihonmachi.vercel.app ↗</a>
+          <div class="pt-5 border-t border-white/5 mt-auto">
+            <a href="https://kuari-higashihonmachi.vercel.app/" target="_blank" rel="noopener"
+               class="btn w-full" style="min-height:44px;font-size:10px;" data-i18n="retreat.n3.link">kuari 東本町に泊まる</a>
           </div>
         </div>
 
@@ -677,17 +711,18 @@
   /* ── i18n translations ── */
   const T = {
     en: {
-      'nav.brand':'Jean Prouvé','nav.subtitle':'c. 1950s — Cameroon','nav.inquire':'Inquire',
-      'hero.badge':'001 — UNIQUE ARCHITECTURAL OBJECT','hero.subtitle':'Sun Shutter System',
+      'nav.brand':'Jean Prouvé','nav.subtitle':'c. 1950s — Cameroon','nav.inquire':'Enquire',
+      'hero.badge':'001 — ARCHITECTURAL OBJECT','hero.subtitle':'Sun Shutter',
       'hero.artist.label':'ARTIST','hero.artist.value':'Jean Prouvé',
       'hero.circa.label':'CIRCA','hero.circa.value':'1950s',
       'hero.origin.label':'ORIGIN','hero.origin.value':'Cameroon',
+      'hero.fac1.label':'Exhibition & Stay','hero.fac2.label':'Private Stay',
       'prov.badge':'002 — PROVENANCE',
       'prov.quote':'"Structure is not a constraint.<br>It is the logic of beauty."',
       'prov.quote.attr':'— Jean Prouvé',
-      'prov.p1':'Salvaged from a primary school building in Cameroon — one of the many prefabricated structures constructed under post-war French modernist architecture programmes — this Brise-Soleil panel represents Prouvé at his most structurally honest.',
-      'prov.p2':'Discovered and rescued by Brice Bérard (@briceberardantiques), the piece was subsequently acquired and presented by found Ltd., Okayama — the Japanese design house known for bridging raw European industrial design with the Japanese wabi-sabi aesthetic.',
-      'prov.p3':'Prouvé\'s corrugated aluminium louvres, pressed from industrial sheet stock and mounted on a welded steel frame, remain intact. The patina of seven decades in equatorial light is irreversible — and irreplaceable.',
+      'prov.p1':'Salvaged from a primary school in Cameroon, this sun shutter was built in the 1950s under French post-war modernist programmes. One of Prouvé\'s most structurally honest works.',
+      'prov.p2':'Discovered by Brice Bérard (@briceberardantiques) and acquired by found Ltd. — a Japanese design house bridging European industrial design with wabi-sabi.',
+      'prov.p3':'All aluminium louvres and hardware remain intact. The warm amber patina — earned across seven decades of equatorial sun — is irreversible.',
       'spec.badge':'003 — SPECIFICATIONS',
       'spec.artist':'Artist','spec.title':'Title','spec.date':'Date','spec.medium':'Medium',
       'spec.origin':'Origin','spec.condition':'Condition','spec.provenance':'Provenance',
@@ -695,47 +730,50 @@
       'spec.artist.val':'Jean Prouvé (1901–1984)',
       'spec.title.val':'Brise-Soleil (Sun Shutter)',
       'spec.date.val':'c. 1950s',
-      'spec.medium.val':'Corrugated pressed aluminium, welded steel frame, industrial rivets',
-      'spec.origin.val':'Primary school building, Cameroon',
-      'spec.condition.val':'Original patina intact. All louvre panels, frame, and mounting hardware present. Corrugated aluminium surface has deepened to warm amber through seven decades of equatorial light.',
-      'spec.provenance.val':'Salvaged: Brice Bérard (@briceberardantiques)<br>Acquired & presented: found Ltd., Okayama (@foundltd)',
-      'spec.category.val':'Architectural Element / Design Object / Museum-grade Collectible',
+      'spec.medium.val':'Corrugated aluminium, welded steel frame, industrial rivets',
+      'spec.origin.val':'Primary school, Cameroon',
+      'spec.condition.val':'Original. All panels, frame, and hardware present. Aluminium has deepened to warm amber over seven decades of equatorial light.',
+      'spec.provenance.val':'Salvaged: Brice Bérard (@briceberardantiques)<br>Presented: found Ltd. (@foundltd)',
+      'spec.category.val':'Architectural Object / Design Collectible',
       'spec.price.val':'ASK',
-      'spec.location.val':'kuari Kaike — Yonago, Tottori (on exhibition)',
-      'chain.badge':'004 — DIGITAL PROVENANCE','chain.title':'On-Chain Certificate',
-      'chain.desc':'A digital twin of this physical object is being issued as an ERC-721 token on the Ethereum mainnet — encoding provenance, authenticity, and ownership history into an immutable public ledger.',
-      'chain.status':'Pending Issuance','chain.contract.label':'CONTRACT ADDRESS',
-      'chain.token.label':'TOKEN STANDARD','chain.id.label':'TOKEN ID','chain.hash.label':'PROVENANCE HASH',
-      'chain.footer':'The digital certificate travels with the physical object. Upon acquisition, ownership of the NFT is transferred alongside the artwork.',
+      'spec.location.val':'kuari Kaike, Yonago, Tottori',
+      'chain.badge':'004 — OWNERSHIP CERTIFICATE','chain.title':'Digital Ownership Certificate',
+      'chain.desc':'A tamper-proof digital certificate is issued with this object — recording its history and authenticity. The certificate transfers to the new owner on acquisition.',
+      'chain.status':'Pending',
+      'chain.contract.label':'CERTIFICATE TYPE','chain.contract.val':'Digital Ownership Record',
+      'chain.token.label':'EDITION','chain.token.val':'1 of 1 — Unique',
+      'chain.id.label':'PROVENANCE','chain.id.val':'Documented / Verified',
+      'chain.hash.label':'STATUS','chain.hash.val':'Issued on acquisition',
+      'chain.footer':'The certificate travels with the piece. Ownership is fully transferable.',
       'axiom.badge':'— THE AXIOM —',
       'axiom.statement':'Pure Experience<br>is the only afterlife.',
-      'axiom.sub':'The most valuable thing is not the object. Not the documentation. Not the price. It is the irreducible moment of encounter — the sense of having been fully present, of having been here.',
+      'axiom.sub':'The most valuable thing is not the object — it is the moment of encounter. The feeling of having been fully present.',
       'axiom.kana':'純粋経験',
-      'context.badge':'005 — THE PURE EXPERIENCE','context.h1':'Why Pure Experience is the Afterlife',
-      'context.p1':'Nishida Kitarō defined pure experience as direct, unmediated encounter — the moment before subject and object divide. Prouvé understood this without naming it: his structures were not designed to be looked at. They were designed to be lived inside.',
-      'context.p2':'The Brise-Soleil does not exist to be owned. It exists to be present. To cast its shadow on the floor each morning. To change the temperature of a room. To make the body aware of time without the use of a clock.',
-      'context.h2':'Involvement as the Highest Value',
-      'context.p3':'What we call ownership here is more precisely: participation. To acquire this object is to join an ongoing experience — a continuous loop of encounter, retreat, and return. The object does not transfer meaning. It opens it.',
-      'context.p4':'In the kuari ecosystem, the object, the space, and the stay form a single architecture of pure experience. Not a collection — a life practice. The most valuable thing you can hold is not the aluminium. It is what happens inside you each time you return to it.',
+      'context.badge':'005 — PURE EXPERIENCE','context.h1':'Experience over ownership',
+      'context.p1':'Prouvé designed spaces to be lived inside, not observed. The Brise-Soleil was never decoration — it was climate made physical: light, shadow, temperature, time.',
+      'context.p2':'It exists to be present with you. Each morning it casts a different shadow. It changes the quality of a room in ways you feel before you notice.',
+      'context.h2':'Participation as the highest value',
+      'context.p3':'Acquiring this piece is an act of participation — joining an ongoing loop of encounter, retreat, and return. The object does not give you meaning. It opens you to it.',
+      'context.p4':'In the kuari ecosystem, the object, the space, and the stay form one continuous experience. Not a collection. A way of living.',
       'retreat.badge':'008 — THE LOOP',
-      'retreat.title':'Three nodes.<br>One unbroken experience.',
-      'retreat.intro':'Ownership does not conclude at acquisition. It opens a loop — an ongoing, embodied relationship between the object, the space where it lives, and the life built around it. Pure Experience is not a moment. It is an architecture.',
-      'retreat.n1.num':'NODE 01 — THE ORIGIN',
+      'retreat.title':'Three spaces.<br>One experience.',
+      'retreat.intro':'Acquiring this object opens a loop — an ongoing relationship between the piece, the space it lives in, and a life built around it.',
+      'retreat.n1.num':'NODE 01 — THE OBJECT',
       'retreat.n1.sub':'Jean Prouvé, c.1950s',
-      'retreat.n1.desc':'The object that started everything. Seventy years of equatorial light compressed into warm amber aluminium. The encounter with this piece is the first movement of the loop.',
-      'retreat.n1.link':'prouve-brise-soleil.vercel.app ↗',
-      'retreat.n2.num':'NODE 02 — THE SPACE',
+      'retreat.n1.desc':'Seventy years of equatorial light compressed into warm amber aluminium. The starting point of the loop.',
+      'retreat.n1.link':'View this piece',
+      'retreat.n2.num':'NODE 02 — EXHIBITION & STAY',
       'retreat.n2.sub':'Kaike, Yonago, Tottori',
-      'retreat.n2.desc':'The retreat where the Prouvé Brise-Soleil is permanently installed. Stay inside the object\'s light. A Life Log begins here — where the body registers what the mind cannot yet name.',
-      'retreat.n2.link':'kuari Kaike — zen-retreat ↗',
-      'retreat.n3.num':'NODE 03 — THE LIFE',
+      'retreat.n2.desc':'The retreat where the Prouvé piece is permanently on display. Stay inside the object\'s light.',
+      'retreat.n2.link':'Stay at kuari Kaike →',
+      'retreat.n3.num':'NODE 03 — PRIVATE STAY',
       'retreat.n3.sub':'Matsue, Shimane',
-      'retreat.n3.desc':'The second node of the kuari network. A private stay that extends the frequency of pure experience into daily rhythm. What begins with the object deepens here — and returns to the object again.',
-      'retreat.n3.link':'kuari-higashihonmachi.vercel.app ↗',
-      'retreat.loop':'← PURE EXPERIENCE ·  純粋経験  · PURE EXPERIENCE ·  純粋経験  · PURE EXPERIENCE →',
-      'acq.badge':'006 — ENTER THE LOOP','acq.title':'Enter the Loop',
+      'retreat.n3.desc':'A private stay in the kuari network — extending the experience into your daily rhythm.',
+      'retreat.n3.link':'Stay at kuari 東本町 →',
+      'retreat.loop':'← PURE EXPERIENCE · 純粋経験 · PURE EXPERIENCE · 純粋経験 →',
+      'acq.badge':'006 — ENQUIRE','acq.title':'Enquire',
       'acq.price':'PRICE — ASK',
-      'acq.desc':'To acquire this object is to enter the kuari ecosystem of pure experience. On exhibition at kuari Kaike, Yonago, Tottori. Viewing by appointment.',
+      'acq.desc':'On exhibition at kuari Kaike, Yonago, Tottori.\nViewing by appointment.',
       'acq.cta1':'Send Enquiry','acq.instagram':'@re_ie_ on Instagram','acq.cta2':'Provenance: @briceberardantiques',
       'footer.sub':'Brise-Soleil — c.1950s — 1 of 1',
       'footer.presented':'On exhibition — kuari Kaike, Yonago, Tottori',
@@ -744,84 +782,89 @@
       'gallery.scroll':'SCROLL',
     },
     ja: {
-      'nav.brand':'Jean Prouvé','nav.subtitle':'c. 1950s — カメルーン','nav.inquire':'お問い合わせ',
-      'hero.badge':'001 — 唯一無二の建築オブジェ','hero.subtitle':'日除けシステム',
+      'nav.brand':'Jean Prouvé','nav.subtitle':'c. 1950s — カメルーン','nav.inquire':'問い合わせ',
+      'hero.badge':'001 — 建築オブジェ','hero.subtitle':'日除けパネル',
       'hero.artist.label':'アーティスト','hero.artist.value':'ジャン・プルーヴェ',
       'hero.circa.label':'年代','hero.circa.value':'1950年代',
       'hero.origin.label':'原産地','hero.origin.value':'カメルーン',
+      'hero.fac1.label':'展示・宿泊','hero.fac2.label':'プライベート宿泊',
       'prov.badge':'002 — 来歴',
       'prov.quote':'「構造は制約ではない。<br>美の論理である。」',
       'prov.quote.attr':'— ジャン・プルーヴェ',
-      'prov.p1':'戦後フランス近代建築プログラムの一環として建設された、カメルーンの小学校から救出されたブリーズ・ソレイユ。プルーヴェの建築思想が最も純粋に体現された作品のひとつです。',
-      'prov.p2':'ブリス・ベラール（@briceberardantiques）によって発見・救出されたこの作品は、その後、岡山を拠点とするデザインハウス「found Ltd.」(@foundltd) に引き継がれ、現在展示されています。',
-      'prov.p3':'波形アルミニウム・ルーバーは溶接スチールフレームに取り付けられた状態のまま現存。赤道直下の陽光を受け続けた70年分のパティーナは、不可逆的な美の証明です。',
+      'prov.p1':'カメルーンの小学校から救出されたブリーズ・ソレイユ。1950年代、フランスの近代建築プログラムの一環として建設された。プルーヴェの代表的な作品。',
+      'prov.p2':'ブリス・ベラール（@briceberardantiques）が発見し、found Ltd.（@foundltd）が取得・展示。',
+      'prov.p3':'すべてのルーバーと金具が現存。70年の赤道光を受けたアルミニウムは、深みのあるウォームアンバーに変化。',
       'spec.badge':'003 — 仕様',
-      'spec.artist':'アーティスト','spec.title':'タイトル','spec.date':'年代','spec.medium':'素材',
-      'spec.origin':'原産地','spec.condition':'状態','spec.provenance':'プロヴナンス',
+      'spec.artist':'作家','spec.title':'タイトル','spec.date':'年代','spec.medium':'素材',
+      'spec.origin':'原産地','spec.condition':'状態','spec.provenance':'来歴',
       'spec.category':'カテゴリー','spec.price':'価格','spec.location':'所在地',
       'spec.artist.val':'ジャン・プルーヴェ（1901–1984）',
       'spec.title.val':'ブリーズ・ソレイユ（日除けパネル）',
       'spec.date.val':'1950年代頃',
-      'spec.medium.val':'波形プレスアルミニウム、溶接スチールフレーム、工業用リベット',
-      'spec.origin.val':'カメルーン小学校建築物',
-      'spec.condition.val':'オリジナルのパティーナを保持。ルーバーパネル、フレーム、取付金具すべて現存。波形アルミニウムは70年の赤道光を受け、銀からウォームアンバーへの豊かなパティーナを帯びている。',
-      'spec.provenance.val':'救出：ブリス・ベラール（@briceberardantiques）<br>取得・展示：found Ltd.、岡山（@foundltd）',
-      'spec.category.val':'建築エレメント / デザインオブジェ / 美術館級コレクター作品',
+      'spec.medium.val':'波形アルミニウム、溶接スチールフレーム、リベット',
+      'spec.origin.val':'カメルーン・小学校',
+      'spec.condition.val':'オリジナル良好。すべてのパネル・フレーム・金具現存。アルミニウムは70年の赤道光によりウォームアンバーのパティーナを帯びている。',
+      'spec.provenance.val':'救出：ブリス・ベラール（@briceberardantiques）<br>展示：found Ltd.（@foundltd）',
+      'spec.category.val':'建築オブジェ / デザインコレクティブル',
       'spec.price.val':'ASK',
-      'spec.location.val':'kuari 皆生（鳥取県米子市・展示中）',
-      'chain.badge':'004 — デジタル・プロヴナンス','chain.title':'オンチェーン証明書',
-      'chain.desc':'この作品のデジタルツインがERC-721トークンとしてイーサリアムメインネット上で発行予定です。来歴・真正性・所有権の履歴を不変の公開台帳に刻み込みます。',
-      'chain.status':'発行準備中','chain.contract.label':'コントラクトアドレス',
-      'chain.token.label':'トークン規格','chain.id.label':'トークンID','chain.hash.label':'プロヴナンスハッシュ',
-      'chain.footer':'デジタル証明書は物理的な作品とともに移転します。取得の際、NFTの所有権も作品と同時に譲渡されます。',
+      'spec.location.val':'kuari 皆生（鳥取県米子市）',
+      'chain.badge':'004 — 所有証明書','chain.title':'デジタル所有証明書',
+      'chain.desc':'この作品には、改ざん不可能なデジタル所有証明書が付属します。来歴・真正性を記録し、取得の際に新しいオーナーへ移転されます。',
+      'chain.status':'発行準備中',
+      'chain.contract.label':'証明書タイプ','chain.contract.val':'デジタル所有記録',
+      'chain.token.label':'エディション','chain.token.val':'1点のみ — ユニーク',
+      'chain.id.label':'来歴','chain.id.val':'記録・検証済み',
+      'chain.hash.label':'ステータス','chain.hash.val':'取得時に発行',
+      'chain.footer':'証明書は作品とともに移転します。所有権は完全に譲渡可能です。',
       'axiom.badge':'— 公理 —',
       'axiom.statement':'純粋経験こそが<br>唯一のアフターライフ。',
-      'axiom.sub':'最も価値のあるものは作品ではない。記録でも、価格でもない。それは出会いの、削ぎ落とされた瞬間——完全にそこにいたという実感、ここにいたという事実。',
+      'axiom.sub':'最も価値のあるものは作品ではない。それは完全にそこにいたという実感——出会いの瞬間そのもの。',
       'axiom.kana':'Pure Experience',
-      'context.badge':'005 — 純粋経験','context.h1':'なぜ純粋経験がアフターライフなのか',
-      'context.p1':'西田幾多郎は純粋経験を「主客未分の直接的な経験」と定義した。プルーヴェはそれを名付けずに理解していた。彼の構造物は見られるために設計されていない。その中に生きるために設計されている。',
-      'context.p2':'ブリーズ・ソレイユは所有されるために存在するのではない。在るために存在する。毎朝床に影を落とすために。部屋の温度を変えるために。時計を使わずに、身体に時間を教えるために。',
+      'context.badge':'005 — 純粋経験','context.h1':'所有より、体験',
+      'context.p1':'プルーヴェは空間を「見られるもの」ではなく「生きるもの」として設計した。ブリーズ・ソレイユは装飾ではない。光・影・温度・時間を物理的に制御するシステムだ。',
+      'context.p2':'毎朝、違う影を落とす。部屋の質を変える。気づく前に、身体が感じている。',
       'context.h2':'関与こそが最高の価値',
-      'context.p3':'ここでいう所有とは、より正確には「参加」である。この作品を取得することは、進行中の体験へ加わることだ——出会い、リトリート、帰還の連続するループへ。作品は意味を移転しない。意味を開くのだ。',
-      'context.p4':'kuari エコシステムにおいて、作品・空間・滞在は純粋経験の単一の建築を形成する。コレクションではなく、生きる実践。あなたが持ち得る最も価値のあるものはアルミニウムではない。それに戻るたびに、あなたの中で起きることだ。',
+      'context.p3':'この作品を手に入れることは「参加」することだ。出会い・リトリート・帰還の繰り返すループへ。作品は意味を与えない。意味への扉を開く。',
+      'context.p4':'kuari エコシステムでは、作品・空間・滞在が一つの体験を形成する。コレクションではなく、生き方。',
       'retreat.badge':'008 — ザ・ループ',
-      'retreat.title':'三つのノード。<br>途切れない体験。',
-      'retreat.intro':'所有は取得で完結しない。ループが開く——作品、それが生きる空間、その周りに築かれた生との、継続する身体的な関係。純粋経験は瞬間ではない。それはアーキテクチャだ。',
-      'retreat.n1.num':'ノード 01 — 起源',
+      'retreat.title':'3つの場所。<br>1つの体験。',
+      'retreat.intro':'この作品を手に入れることでループが開く——作品、それが生きる空間、その周りに築かれた生との、継続する関係。',
+      'retreat.n1.num':'ノード 01 — 作品',
       'retreat.n1.sub':'ジャン・プルーヴェ、1950年代',
-      'retreat.n1.desc':'すべての始まりとなった作品。70年分の赤道光がウォームアンバーのアルミニウムに圧縮されている。この作品との出会いがループの第一楽章だ。',
-      'retreat.n1.link':'prouve-brise-soleil.vercel.app ↗',
-      'retreat.n2.num':'ノード 02 — 空間',
+      'retreat.n1.desc':'70年の赤道光がアルミニウムに刻まれた、ループの出発点。',
+      'retreat.n1.link':'この作品を見る',
+      'retreat.n2.num':'ノード 02 — 展示・宿泊',
       'retreat.n2.sub':'鳥取県米子市皆生',
-      'retreat.n2.desc':'プルーヴェのブリーズ・ソレイユが常設展示されているリトリート。作品の光の中に滞在する。身体が言語化できないものを登録する場所——ライフログはここから始まる。',
-      'retreat.n2.link':'kuari 皆生 — zen-retreat ↗',
-      'retreat.n3.num':'ノード 03 — 生',
-      'retreat.n3.sub':'島根県松江市東本町',
-      'retreat.n3.desc':'kuari ネットワークの第二ノード。純粋経験の周波数を日常のリズムへと延長するプライベートステイ。作品から始まるものがここで深まり——また作品へと戻っていく。',
-      'retreat.n3.link':'kuari-higashihonmachi.vercel.app ↗',
-      'retreat.loop':'← 純粋経験 · Pure Experience · 純粋経験 · Pure Experience · 純粋経験 →',
-      'acq.badge':'006 — ループへの参加','acq.title':'ループに入る',
+      'retreat.n2.desc':'プルーヴェの作品が常設展示されているリトリート。作品の光の中に滞在する。',
+      'retreat.n2.link':'kuari 皆生に滞在する →',
+      'retreat.n3.num':'ノード 03 — プライベート宿泊',
+      'retreat.n3.sub':'島根県松江市',
+      'retreat.n3.desc':'kuari ネットワーク第二拠点。純粋経験を日常のリズムへと延長するプライベートステイ。',
+      'retreat.n3.link':'kuari 東本町に泊まる →',
+      'retreat.loop':'← 純粋経験 · Pure Experience · 純粋経験 · Pure Experience →',
+      'acq.badge':'006 — お問い合わせ','acq.title':'お問い合わせ',
       'acq.price':'価格 — ASK',
-      'acq.desc':'この作品を取得することは、kuari の純粋経験エコシステムに参加することだ。kuari 皆生（鳥取県米子市）にて展示中。内覧は予約制。',
-      'acq.cta1':'お問い合わせフォーム','acq.instagram':'Instagram @re_ie_','acq.cta2':'プロヴナンス：@briceberardantiques',
-      'footer.sub':'ブリーズ・ソレイユ — 1950年代 — 1点限り',
+      'acq.desc':'kuari 皆生（鳥取県米子市）にて展示中。\n内覧は予約制。',
+      'acq.cta1':'問い合わせフォーム','acq.instagram':'Instagram @re_ie_','acq.cta2':'来歴：@briceberardantiques',
+      'footer.sub':'ブリーズ・ソレイユ — 1950年代 — 1点',
       'footer.presented':'kuari 皆生 にて展示中',
       'footer.handles':'@foundltd · @briceberardantiques',
       'footer.copy':'© 2026 found Ltd. All rights reserved.',
       'gallery.scroll':'スクロール',
     },
     fr: {
-      'nav.brand':'Jean Prouvé','nav.subtitle':'c. 1950s — Cameroun','nav.inquire':'Renseignements',
+      'nav.brand':'Jean Prouvé','nav.subtitle':'c. 1950s — Cameroun','nav.inquire':'Contact',
       'hero.badge':'001 — OBJET ARCHITECTURAL UNIQUE','hero.subtitle':'Système Brise-Soleil',
       'hero.artist.label':'ARTISTE','hero.artist.value':'Jean Prouvé',
       'hero.circa.label':'ÉPOQUE','hero.circa.value':'Années 1950',
       'hero.origin.label':'ORIGINE','hero.origin.value':'Cameroun',
+      'hero.fac1.label':'Exposition & Séjour','hero.fac2.label':'Séjour Privé',
       'prov.badge':'002 — PROVENANCE',
       'prov.quote':'« La structure n\'est pas une contrainte.<br>C\'est la logique du beau. »',
       'prov.quote.attr':'— Jean Prouvé',
-      'prov.p1':'Sauvegardé d\'un bâtiment scolaire au Cameroun — l\'une des nombreuses structures préfabriquées des programmes d\'architecture moderniste française d\'après-guerre — ce panneau Brise-Soleil représente Prouvé dans sa vérité structurelle la plus pure.',
-      'prov.p2':'Découvert par Brice Bérard (@briceberardantiques), la pièce a été acquise et présentée par found Ltd., Okayama — la maison de design japonaise reconnue pour son dialogue entre le brutalisme industriel européen et l\'esthétique wabi-sabi.',
-      'prov.p3':'Les lames en aluminium ondulé de Prouvé, montées sur un cadre en acier soudé, sont intactes. La patine de sept décennies sous la lumière équatoriale est irréversible — et irremplaçable.',
+      'prov.p1':'Sauvegardé d\'une école primaire au Cameroun, ce brise-soleil a été fabriqué dans les années 1950 dans le cadre des programmes d\'architecture moderniste française d\'après-guerre. L\'une des œuvres les plus honnêtes de Prouvé.',
+      'prov.p2':'Découvert par Brice Bérard (@briceberardantiques), spécialiste du sauvetage architectural de Prouvé en Afrique de l\'Ouest. Acquis et présenté par found Ltd. (@foundltd), Japon.',
+      'prov.p3':'Les lames en aluminium ondulé ont développé un camaïeu d\'ambre chaud — sept décennies de lumière équatoriale irréversiblement inscrites dans le métal.',
       'spec.badge':'003 — SPÉCIFICATIONS',
       'spec.artist':'Artiste','spec.title':'Titre','spec.date':'Date','spec.medium':'Matériau',
       'spec.origin':'Origine','spec.condition':'État','spec.provenance':'Provenance',
@@ -830,46 +873,49 @@
       'spec.title.val':'Brise-Soleil (Système pare-soleil)',
       'spec.date.val':'c. Années 1950',
       'spec.medium.val':'Aluminium ondulé pressé, cadre en acier soudé, rivets industriels',
-      'spec.origin.val':'Bâtiment scolaire, Cameroun',
-      'spec.condition.val':'Patine d\'origine intacte. Tous les panneaux, cadre et quincaillerie présents. L\'aluminium ondulé a développé un camaïeu d\'ambre chaud au fil de sept décennies sous la lumière équatoriale.',
-      'spec.provenance.val':'Sauvegardé : Brice Bérard (@briceberardantiques)<br>Acquis & présenté : found Ltd., Okayama (@foundltd)',
+      'spec.origin.val':'École primaire, Cameroun',
+      'spec.condition.val':'Patine d\'origine intacte. Tous les panneaux, cadre et quincaillerie présents. L\'aluminium a développé un camaïeu d\'ambre chaud après sept décennies sous la lumière équatoriale.',
+      'spec.provenance.val':'Sauvegardé : Brice Bérard (@briceberardantiques)<br>Acquis & présenté : found Ltd. (@foundltd)',
       'spec.category.val':'Élément architectural / Objet de design / Collection de niveau muséal',
       'spec.price.val':'ASK',
       'spec.location.val':'kuari Kaike — Yonago, Tottori (en exposition)',
-      'chain.badge':'004 — PROVENANCE NUMÉRIQUE','chain.title':'Certificat On-Chain',
-      'chain.desc':'Un jumeau numérique de cet objet sera émis sous forme de token ERC-721 sur le mainnet Ethereum — inscrivant la provenance, l\'authenticité et l\'historique de propriété dans un registre public immuable.',
-      'chain.status':'Émission en cours','chain.contract.label':'ADRESSE DU CONTRAT',
-      'chain.token.label':'STANDARD TOKEN','chain.id.label':'ID TOKEN','chain.hash.label':'HASH PROVENANCE',
-      'chain.footer':'Le certificat numérique accompagne l\'objet physique. Lors de l\'acquisition, la propriété du NFT est transférée avec l\'œuvre.',
+      'chain.badge':'004 — CERTIFICAT DE PROPRIÉTÉ','chain.title':'Certificat de Propriété Numérique',
+      'chain.desc':'Un certificat numérique infalsifiable est émis avec cet objet — enregistrant son histoire et son authenticité. Il est transféré au nouvel acquéreur lors de l\'acquisition.',
+      'chain.status':'En attente','chain.contract.label':'TYPE DE CERTIFICAT',
+      'chain.contract.val':'Enregistrement de Propriété Numérique',
+      'chain.token.label':'ÉDITION','chain.token.val':'1 sur 1 — Unique',
+      'chain.id.label':'PROVENANCE','chain.id.val':'Documentée / Vérifiée',
+      'chain.hash.label':'STATUT','chain.hash.val':'Émis lors de l\'acquisition',
+      'chain.footer':'Le certificat accompagne l\'objet. La propriété est entièrement transmissible.',
       'axiom.badge':'— L\'AXIOME —',
       'axiom.statement':'L\'Expérience Pure<br>est le seul afterlife.',
-      'axiom.sub':'La chose la plus précieuse n\'est pas l\'objet. Ni la documentation. Ni le prix. C\'est le moment irréductible de la rencontre — le sentiment d\'avoir été pleinement présent, d\'avoir été là.',
+      'axiom.sub':'La chose la plus précieuse n\'est pas l\'objet — c\'est le moment de la rencontre. Le sentiment d\'avoir été pleinement présent.',
       'axiom.kana':'純粋経験',
       'context.badge':'005 — L\'EXPÉRIENCE PURE','context.h1':'Pourquoi l\'Expérience Pure est l\'Afterlife',
-      'context.p1':'Nishida Kitarō définissait l\'expérience pure comme une rencontre directe et non médiatisée — le moment avant la division sujet-objet. Prouvé le comprenait sans le nommer : ses structures n\'étaient pas conçues pour être regardées. Elles étaient conçues pour être vécues de l\'intérieur.',
-      'context.p2':'Le Brise-Soleil n\'existe pas pour être possédé. Il existe pour être présent. Pour projeter son ombre sur le sol chaque matin. Pour changer la température d\'une pièce. Pour faire prendre conscience au corps du temps sans recourir à une horloge.',
-      'context.h2':'L\'Engagement comme Valeur Suprême',
-      'context.p3':'Ce que nous appelons propriété ici est plus précisément : participation. Acquérir cet objet, c\'est rejoindre une expérience en cours — une boucle continue de rencontre, de retraite et de retour. L\'objet ne transfère pas le sens. Il l\'ouvre.',
-      'context.p4':'Dans l\'écosystème kuari, l\'objet, l\'espace et le séjour forment une architecture unique d\'expérience pure. Non pas une collection — une pratique de vie. La chose la plus précieuse que vous pouvez tenir n\'est pas l\'aluminium. C\'est ce qui se passe en vous chaque fois que vous y revenez.',
+      'context.p1':'Prouvé concevait des espaces pour y vivre, non pour les observer. Le Brise-Soleil n\'était pas un ornement — c\'était le climat rendu physique : lumière, ombre, température, temps.',
+      'context.p2':'Il n\'existe pas pour être possédé. Il existe pour être présent — pour projeter son ombre chaque matin, pour changer la température d\'une pièce, pour faire ressentir au corps le passage du temps.',
+      'context.h2':'La Participation comme Valeur Suprême',
+      'context.p3':'Acquérir cet objet, c\'est rejoindre une expérience en cours. L\'objet n\'apporte pas le sens — il l\'ouvre.',
+      'context.p4':'Dans l\'écosystème kuari, l\'objet, l\'espace et le séjour forment une architecture d\'expérience pure. Non pas une collection — une pratique de vie.',
       'retreat.badge':'008 — LA BOUCLE',
       'retreat.title':'Trois nœuds.<br>Une expérience continue.',
-      'retreat.intro':'La propriété ne se conclut pas à l\'acquisition. Elle ouvre une boucle — une relation incarnée et continue entre l\'objet, l\'espace où il vit, et la vie construite autour de lui. L\'Expérience Pure n\'est pas un moment. C\'est une architecture.',
+      'retreat.intro':'La propriété ne se conclut pas à l\'acquisition. Elle ouvre une boucle — une relation vivante entre l\'objet, l\'espace où il vit, et la vie construite autour de lui.',
       'retreat.n1.num':'NŒUD 01 — L\'ORIGINE',
       'retreat.n1.sub':'Jean Prouvé, c.1950s',
-      'retreat.n1.desc':'L\'objet qui a tout commencé. Soixante-dix ans de lumière équatoriale compressés dans un aluminium ambre chaud. La rencontre avec cette pièce est le premier mouvement de la boucle.',
+      'retreat.n1.desc':'L\'objet. Soixante-dix ans de lumière équatoriale dans un aluminium ambre chaud. Le premier mouvement de la boucle.',
       'retreat.n1.link':'prouve-brise-soleil.vercel.app ↗',
       'retreat.n2.num':'NŒUD 02 — L\'ESPACE',
       'retreat.n2.sub':'Kaike, Yonago, Tottori',
-      'retreat.n2.desc':'La retraite où le Brise-Soleil de Prouvé est installé en permanence. Séjourner dans la lumière de l\'objet. Un carnet de vie commence ici — là où le corps enregistre ce que l\'esprit ne peut pas encore nommer.',
-      'retreat.n2.link':'kuari Kaike — zen-retreat ↗',
+      'retreat.n2.desc':'La retraite où le Brise-Soleil est exposé en permanence. Séjourner dans la lumière de l\'objet. L\'expérience pure commence ici.',
+      'retreat.n2.link':'Séjourner à kuari Kaike →',
       'retreat.n3.num':'NŒUD 03 — LA VIE',
       'retreat.n3.sub':'Matsue, Shimane',
-      'retreat.n3.desc':'Le deuxième nœud du réseau kuari. Un séjour privé qui prolonge la fréquence de l\'expérience pure dans le rythme quotidien. Ce qui commence avec l\'objet s\'approfondit ici — et revient à l\'objet.',
-      'retreat.n3.link':'kuari-higashihonmachi.vercel.app ↗',
+      'retreat.n3.desc':'Le deuxième nœud du réseau kuari. Un séjour privé qui prolonge la fréquence de l\'expérience dans le quotidien.',
+      'retreat.n3.link':'Séjourner à kuari 東本町 →',
       'retreat.loop':'← EXPÉRIENCE PURE · 純粋経験 · EXPÉRIENCE PURE · 純粋経験 · EXPÉRIENCE PURE →',
       'acq.badge':'006 — ENTRER DANS LA BOUCLE','acq.title':'Entrer dans la Boucle',
       'acq.price':'PRIX — ASK',
-      'acq.desc':'Acquérir cet objet, c\'est entrer dans l\'écosystème kuari d\'expérience pure. En exposition à kuari Kaike, Yonago, Tottori. Visite sur rendez-vous.',
+      'acq.desc':'En exposition à kuari Kaike, Yonago, Tottori. Visite sur rendez-vous pour collectionneurs sérieux.',
       'acq.cta1':'Envoyer une demande','acq.instagram':'@re_ie_ sur Instagram','acq.cta2':'Provenance : @briceberardantiques',
       'footer.sub':'Brise-Soleil — c.1950s — Pièce unique',
       'footer.presented':'En exposition — kuari Kaike, Yonago, Tottori',

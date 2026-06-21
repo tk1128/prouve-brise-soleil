@@ -83,6 +83,21 @@
         }
       },
       "provenance": "Salvaged from a primary school in Cameroon by Brice Bérard (@briceberardantiques). Acquired and presented by found Ltd. (@foundltd), Japan.",
+      "isRelatedTo": {
+        "@type": "LodgingBusiness",
+        "name": "kuari Kaike",
+        "description": "A retreat designed around the presence of the Jean Prouvé Brise-Soleil. Physical node of the kuari ecosystem. Owners and fractional holders may access an immersive residency experience with the object in its living environment.",
+        "location": {
+          "@type": "Place",
+          "name": "Kaike, Yonago, Tottori, Japan",
+          "address": { "@type": "PostalAddress", "addressLocality": "Yonago", "addressRegion": "Tottori", "addressCountry": "JP" }
+        },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Jean Prouvé Brise-Soleil on-site" },
+          { "@type": "LocationFeatureSpecification", "name": "Collector residency programme" },
+          { "@type": "LocationFeatureSpecification", "name": "kuari network access" }
+        ]
+      },
       "offers": {
         "@type": "Offer",
         "url": "https://prouve-brise-soleil.vercel.app/#inquire",
@@ -503,6 +518,66 @@
     <div class="space-y-0" id="faq-list"></div>
   </section>
 
+  <!-- ── LIVING ARCHIVE ──────────────────────────────────── -->
+  <section class="py-24 md:py-44 px-6 md:px-16 border-t border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <p class="font-mono text-steel text-xs tracking-widest mb-14 md:mb-20" data-i18n="retreat.badge">008 — THE LIVING ARCHIVE</p>
+
+      <!-- headline -->
+      <div class="grid md:grid-cols-2 gap-12 md:gap-24 items-end mb-16 md:mb-24">
+        <div>
+          <h2 class="font-display text-chalk font-light leading-none mb-4"
+              style="font-size:clamp(48px,9vw,108px); letter-spacing:-0.02em;"
+              data-i18n="retreat.title">Pure<br>Experience</h2>
+          <p class="font-display text-warm italic font-light" style="font-size:clamp(15px,2vw,20px);"
+             data-i18n="retreat.kana">純粋経験</p>
+        </div>
+        <div class="flex flex-col gap-5 pb-2">
+          <p class="text-warm text-sm leading-loose" data-i18n="retreat.p1">
+            Ownership of a singular object does not end at the wall. The Prouvé Brise-Soleil, on exhibition in Kaike, inhabits the same spatial logic it was built for — mediating light, framing stillness, opening a room to time.
+          </p>
+          <p class="text-warm text-sm leading-loose" data-i18n="retreat.p2">
+            kuari Kaike is the physical node of this ecosystem: a retreat designed around the presence of this object, where holders, collectors, and guests engage directly with the work in its lived environment. Not a gallery. A Life Log.
+          </p>
+        </div>
+      </div>
+
+      <!-- spiral diagram -->
+      <div class="border border-white/6 px-8 md:px-12 py-10 mb-14 overflow-x-auto">
+        <div class="font-mono text-xs tracking-widest min-w-max mx-auto" style="color:#6B7F8E;">
+          <div class="flex items-center gap-0 mb-5">
+            <span class="border border-white/15 px-4 py-2 text-chalk" data-i18n="retreat.node1">OBJECT</span>
+            <span class="px-3">──</span>
+            <span class="border border-white/15 px-4 py-2" data-i18n="retreat.node2">EXHIBITION</span>
+            <span class="px-3">──</span>
+            <span class="border border-white/15 px-4 py-2" data-i18n="retreat.node3">RETREAT</span>
+            <span class="px-3">──</span>
+            <span class="border border-white/15 px-4 py-2" data-i18n="retreat.node4">LIFE LOG</span>
+          </div>
+          <div class="flex items-center gap-0">
+            <span class="pl-6 pr-3 text-white/10">↑</span>
+            <span class="text-white/10" style="letter-spacing:0;">────────────────────────────────────────────────────</span>
+            <span class="px-3 text-white/10">↙</span>
+          </div>
+          <div class="mt-3 text-center" style="letter-spacing:0.3em; font-size:9px; color:#6B7F8E44;" data-i18n="retreat.spiral">SPIRAL GROWTH — kuari ecosystem</div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <p class="text-warm text-xs leading-loose max-w-xs" style="letter-spacing:0.06em;" data-i18n="retreat.note">
+          Fractional and full ownership of this object includes access to the kuari residency programme at Kaike.
+        </p>
+        <a href="https://kuari-higashihonmachi.vercel.app/"
+           target="_blank" rel="noopener"
+           class="font-mono text-steel2 text-xs tracking-widest hover:text-chalk transition-colors duration-300 whitespace-nowrap"
+           data-i18n="retreat.cta">
+          Synthesize your pure experience at kuari Kaike →
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ── ACQUISITION ───────────────────────────────────── -->
   <section id="inquire" class="py-24 md:py-36 px-6 md:px-16 text-center border-t border-white/5">
     <p class="font-mono text-steel text-xs tracking-widest mb-6 md:mb-8" data-i18n="acq.badge">006 — ACQUISITION</p>
@@ -573,6 +648,15 @@ Serious collectors only. Viewing by appointment.</p>
       'context.h2':'Why It Matters Now',
       'context.p3':'In a market saturated with edition prints and digital speculation, objects like this carry something irreducible: physical proof of time, process, and place. The corrugated aluminium has shifted from industrial silver to warm amber — a living patina no reproduction can approximate.',
       'context.p4':'For the Web3-native collector, the provenance chain aligns naturally with blockchain logic. For the traditional collector, it is simply one of the most significant Prouvé objects to surface in Japan in recent memory.',
+      'retreat.badge':'008 — THE LIVING ARCHIVE',
+      'retreat.title':'Pure\nExperience',
+      'retreat.kana':'純粋経験',
+      'retreat.p1':'Ownership of a singular object does not end at the wall. The Prouvé Brise-Soleil, on exhibition in Kaike, inhabits the same spatial logic it was built for — mediating light, framing stillness, opening a room to time.',
+      'retreat.p2':'kuari Kaike is the physical node of this ecosystem: a retreat designed around the presence of this object, where holders, collectors, and guests engage directly with the work in its lived environment. Not a gallery. A Life Log.',
+      'retreat.node1':'OBJECT','retreat.node2':'EXHIBITION','retreat.node3':'RETREAT','retreat.node4':'LIFE LOG',
+      'retreat.spiral':'SPIRAL GROWTH — kuari ecosystem',
+      'retreat.note':'Fractional and full ownership of this object includes access to the kuari residency programme at Kaike.',
+      'retreat.cta':'Synthesize your pure experience at kuari Kaike →',
       'acq.badge':'006 — ACQUISITION','acq.title':'Available for Acquisition',
       'acq.price':'PRICE — ASK',
       'acq.desc':'Currently on exhibition in Kaike, Yonago, Tottori.\nSerious collectors only. Viewing by appointment.',
@@ -620,6 +704,15 @@ Serious collectors only. Viewing by appointment.</p>
       'context.h2':'なぜ今、重要なのか',
       'context.p3':'エディションプリントとデジタル投機が溢れる市場において、このオブジェクトは不可逆的なものを持っています。時間・プロセス・場所の物理的な証明。波形アルミニウムは工業的な銀からウォームアンバーへと変容した——70年の赤道光が刻んだ、複製不可能なパティーナ。',
       'context.p4':'Web3ネイティブなコレクターにとって、プロヴナンスチェーンはブロックチェーンの論理と自然に合致します。従来のコレクターにとっては、近年日本に現れた最も重要なプルーヴェ作品のひとつです。',
+      'retreat.badge':'008 — リビング・アーカイブ',
+      'retreat.title':'純粋\n経験',
+      'retreat.kana':'Pure Experience',
+      'retreat.p1':'作品の所有は、壁の前で終わらない。皆生に展示されたプルーヴェのブリーズ・ソレイユは、設計された論理の中に生きている——光を調律し、静けさを縁取り、空間を時間へと開く。',
+      'retreat.p2':'kuari 皆生は、このエコシステムの物理的なノードです。この作品の存在を軸に設計されたリトリートで、オーナー、コレクター、ゲストが作品を日常の文脈で直接体験します。ギャラリーではなく、ライフログ。',
+      'retreat.node1':'作品','retreat.node2':'展示','retreat.node3':'リトリート','retreat.node4':'ライフログ',
+      'retreat.spiral':'スパイラル成長 — kuari エコシステム',
+      'retreat.note':'この作品のフラクショナル・完全オーナーは、皆生 kuari レジデンシー・プログラムへのアクセスが含まれます。',
+      'retreat.cta':'kuari 皆生で純粋経験を統合する →',
       'acq.badge':'006 — 取得','acq.title':'ご購入のご相談',
       'acq.price':'価格 — ASK',
       'acq.desc':'現在、鳥取県米子市皆生にて展示中。\nシリアスなコレクターの方限定。内覧は予約制。',
@@ -667,6 +760,15 @@ Serious collectors only. Viewing by appointment.</p>
       'context.h2':'Pourquoi Cela Compte Aujourd\'hui',
       'context.p3':'Dans un marché saturé d\'éditions imprimées et de spéculation numérique, des objets comme celui-ci portent quelque chose d\'irréductible : une preuve physique du temps, du processus et du lieu.',
       'context.p4':'Pour le collectionneur natif Web3, la chaîne de provenance s\'aligne naturellement avec la logique blockchain. Pour le collectionneur traditionnel, c\'est l\'un des objets Prouvé les plus significatifs à avoir émergé au Japon.',
+      'retreat.badge':'008 — L\'ARCHIVE VIVANTE',
+      'retreat.title':'Expérience\nPure',
+      'retreat.kana':'純粋経験',
+      'retreat.p1':'La possession d\'un objet singulier ne s\'arrête pas au mur. Le Brise-Soleil de Prouvé, en exposition à Kaike, habite la même logique spatiale pour laquelle il a été conçu — médiateur de lumière, cadre du silence, ouverture d\'une pièce au temps.',
+      'retreat.p2':'kuari Kaike est le nœud physique de cet écosystème : une retraite conçue autour de la présence de cette œuvre, où détenteurs, collectionneurs et hôtes s\'engagent directement avec le travail dans son environnement vécu. Pas une galerie. Un carnet de vie.',
+      'retreat.node1':'ŒUVRE','retreat.node2':'EXPOSITION','retreat.node3':'RETRAITE','retreat.node4':'CARNET DE VIE',
+      'retreat.spiral':'CROISSANCE SPIRALE — écosystème kuari',
+      'retreat.note':'La propriété fractionnelle et totale de cette œuvre inclut l\'accès au programme de résidence kuari à Kaike.',
+      'retreat.cta':'Synthétisez votre expérience pure à kuari Kaike →',
       'acq.badge':'006 — ACQUISITION','acq.title':'Disponible à l\'Acquisition',
       'acq.price':'PRIX — ASK',
       'acq.desc':'En exposition à Kaike, Yonago, Tottori.\nCollectionneurs sérieux uniquement. Visite sur rendez-vous.',
@@ -793,6 +895,12 @@ Serious collectors only. Viewing by appointment.</p>
     // Update FAQ badge
     const badge = document.querySelector('[data-i18n="faq.badge"]');
     if (badge) badge.textContent = faqBadge[lang] || faqBadge.en;
+
+    // Update retreat title (contains \n → <br>)
+    const retreatTitle = document.querySelector('[data-i18n="retreat.title"]');
+    if (retreatTitle && T[lang]['retreat.title']) {
+      retreatTitle.innerHTML = T[lang]['retreat.title'].replace(/\n/g, '<br>');
+    }
   }
 
   // Init

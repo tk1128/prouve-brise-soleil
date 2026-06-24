@@ -951,7 +951,7 @@
       'retreat.n1.num':'NŒUD 01 — L\'ORIGINE',
       'retreat.n1.sub':'Jean Prouvé, c.1950s',
       'retreat.n1.desc':'L\'objet. Soixante-dix ans de lumière équatoriale dans un aluminium ambre chaud. Le premier mouvement de la boucle.',
-      'retreat.n1.link':'prouve-brise-soleil.vercel.app ↗',
+      'retreat.n1.link':'Voir l\'œuvre',
       'retreat.n2.num':'NŒUD 02 — L\'ESPACE',
       'retreat.n2.sub':'Kaike, Yonago, Tottori',
       'retreat.n2.desc':'La retraite où le Brise-Soleil est exposé en permanence. Séjourner dans la lumière de l\'objet. L\'expérience pure commence ici.',
@@ -1109,6 +1109,17 @@
   }, { passive: true });
 
   // Scroll to top — instant (bypasses scroll-behavior:smooth)
+  /* ── Strip tracking params (fbclid, utm_*, gclid etc.) ── */
+  (function(){
+    const u = new URL(location.href);
+    const tp = ['fbclid','utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id','gclid','mc_eid','igshid','aem'];
+    let dirty = false;
+    tp.forEach(p => { if(u.searchParams.has(p)){ u.searchParams.delete(p); dirty=true; } });
+    // also strip any param starting with fb_ or aem_
+    [...u.searchParams.keys()].forEach(k => { if(/^(fb_|aem_)/.test(k)){ u.searchParams.delete(k); dirty=true; } });
+    if(dirty) history.replaceState({}, '', u.search ? u.toString() : u.origin + u.pathname);
+  })();
+
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   </script>
